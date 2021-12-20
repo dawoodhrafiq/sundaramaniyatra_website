@@ -2798,7 +2798,7 @@ font-weight:normal;
 
 /*=== 5.4 PAGE TITLE SECTION ===*/
 .pageTitle {
-  background-image: url("../img/pages/page-title-bg.jpg");
+  background-image: url("../img/home/page-title-bg.jpg");
   width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
