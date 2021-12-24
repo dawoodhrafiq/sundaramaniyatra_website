@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="css/colors/default.css" id="option_color">
 
   <!-- FAVICON -->
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+  <link rel="shortcut icon" type="image/png" href="img/home/logo-color-sm.png"/>
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -105,7 +105,7 @@
 
     <!-- PAGE TITLE -->
 
-    <section class="pageTitle" style="background-image:url(img/pages/page-title-bg6.jpg);">
+    <section class="pageTitle" style="background-image:url(img/home/pages/page-title-bg6.jpg);">
 
       <div class="container">
 
@@ -1144,7 +1144,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
           <div class="row">
             <div class="col-sm-3 col-xs-12">
               <div class="footerContent">
-                <a href="index.html" class="footer-logo"><img src="img/logo-color-sm.png" alt="footer-logo"><span class="footer-logo-title">Sundaramani Travels</span></a>
+                <a href="index.html" class="footer-logo"><img src="img/home/logo-color-sm.png" alt="footer-logo"><span class="footer-logo-title">Sundaramani Travels</span></a>
            <p>A pilgrimage is a journey in search of moral and spiritual significance.
            India is covered by many holy sites and with sacred rivers.  Going on a pilgrimage is considered as a good Karma. Our motto is to take people to these holy places across India in a most convenient way and with utmost care.</p>
               </div>
