@@ -138,7 +138,12 @@
 
 
     <!-- PAGE CONTENT -->
-
+    <?php 
+         $conn=mysqli_connect("localhost","root","","sundaramani-travels");
+         $sel_query="select * from cuddalore";
+         $result=mysqli_query($conn,$sel_query);
+         $row=mysqli_fetch_array($result);
+        ?>
     <sectio class="mainContentSection singlePackage">
 
       <div class="container">
@@ -151,7 +156,7 @@
 
               <h2>General Information</h2>
 
-              <p> Cuddalore is famous for temples such as Thiruvakkarai vakkrakali amman, Mailam murugan temple, Panchavati anjaneyar temple, Singirikudi narasimmar temple, Manakula vinayagartemple, Thiruvahindipuram Devanatha swamy etc.     </p>
+              <p><?php echo$row['content'];?></p>
 
             </div>
 
@@ -411,7 +416,7 @@
 
                        
 
-                        <p><strong>2 DAYS TRIP</strong> <br>
+                        <p><strong style="text-transform:uppercase;"><?php echo$row['duration'];?> TRIP</strong> <br>
 
 Local travel by AC Travellor, Non-AC accomodation and pure veg food provided. <br>
 
@@ -458,15 +463,15 @@ THIRUVENNAINALLUR TEMPLE<br>
 
                             
 
-                            <li><span >MONTH: </span> Mar 20, 2021 - Mar 21, 2021</li>
+                            <li><span >MONTH: </span> <?php echo$row['month'];?></li>
 
-                            <li></i><span >MODE OF TRAVEL: </span> Travellor</li>
+                            <li></i><span >MODE OF TRAVEL: </span> <?php echo$row['modeoftravel'];?></li>
 
-                            <li><span>DURATION:</span> 2 days</li>
+                            <li><span>DURATION:</span><?php echo$row['duration'];?></li>
 
                            <br>
 
-                            <li></i>Starts from <span class="booknw-rupees"><img src="img/booking/rupees.png" width="12" height="17"> 4,300* </span> Per Person</li>
+                            <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <?php echo$row['price'];?>* </span> Per Person</li>
 
                           </ul>
 
@@ -533,15 +538,15 @@ THIRUVENNAINALLUR TEMPLE<br>
 
                             
 
-                            <li><span >MONTH: </span> Mar 20, 2021 - Mar 21, 2021</li>
+                            <li><span >MONTH: </span><?php echo$row['month'];?></li>
 
-                            <li></i><span >MODE OF TRAVEL: </span> Travellor</li>
+                            <li></i><span >MODE OF TRAVEL: </span><?php echo$row['modeoftravel'];?></li>
 
-                            <li><span>DURATION:</span> 2 days</li>
+                            <li><span>DURATION:</span><?php echo$row['duration'];?></li>
 
                            <br>
 
-                            <li></i>Starts from <span class="booknw-rupees"><img src="img/booking/rupees.png" width="12" height="17"> 4,300* </span> Per Person</li>
+                            <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"><?php echo$row['price'];?>* </span> Per Person</li>
 
                           </ul>
 
@@ -642,15 +647,15 @@ Package Fare Includes:</strong><br><br>
 
                             
 
-                            <li><span >MONTH: </span> Mar 20, 2021 - Mar 21, 2021</li>
+                            <li><span >MONTH: </span> <?php echo$row['month'];?></li>
 
-                            <li></i><span >MODE OF TRAVEL: </span> Travellor</li>
+                            <li></i><span >MODE OF TRAVEL: </span> <?php echo$row['month'];?>modeoftravel</li>
 
-                            <li><span>DURATION:</span> 2 days</li>
+                            <li><span>DURATION:</span> <?php echo$row['duration'];?></li>
 
                            <br>
 
-                            <li></i>Starts from <span class="booknw-rupees"><img src="img/booking/rupees.png" width="12" height="17"> 4,300* </span> Per Person</li>
+                            <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <?php echo$row['price'];?>* </span> Per Person</li>
 
                           </ul>
 
@@ -724,15 +729,15 @@ Package Fare Includes:</strong><br><br>
 
                             
 
-                            <li><span >MONTH: </span> Mar 20, 2021 - Mar 21, 2021</li>
+                            <li><span >MONTH: </span> <?php echo$row['month'];?></li>
 
-                            <li></i><span >MODE OF TRAVEL: </span> Travellor</li>
+                            <li></i><span >MODE OF TRAVEL: </span> <?php echo$row['modeoftravel'];?></li>
 
-                            <li><span>DURATION:</span> 2 days</li>
+                            <li><span>DURATION:</span> <?php echo$row['duration'];?></li>
 
                            <br>
 
-                            <li></i>Starts from <span class="booknw-rupees"><img src="img/booking/rupees.png" width="12" height="17"> 4,300* </span> Per Person</li>
+                            <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <?php echo$row['price'];?>* </span> Per Person</li>
 
                           </ul>
 
@@ -767,7 +772,7 @@ Package Fare Includes:</strong><br><br>
            <div class="col-xs-12">
 
                       <p class="text-muted"><strong>*</strong>
- Please make your payment before Mar 10th to confirm your seats. 
+ Please make your payment before <span><?php echo$row['closingday'];?></span> to confirm your seats. 
 
 <br>Kindly ensure your good health before enrolling for the trip. 
 

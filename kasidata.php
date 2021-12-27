@@ -142,11 +142,11 @@
     </div>
  <div class="col-10">
       <div class="right-clm">
-      <h1>GENERAL INFORMATION ABOUT CUDDALORE</h1>
+      <h1>GENERAL INFORMATION ABOUT KASI</h1>
       <div class="popup_msg text-center">
       <?php
             $conn=mysqli_connect("localhost","root","","sundaramani-travels");
-            $sel_query="select * from cuddalore";
+            $sel_query="select * from kasitrip";
             $result=mysqli_query($conn,$sel_query);
             $msg="";
                 if(isset($_GET['del']) && $_GET['del']=='succ'){
@@ -187,15 +187,15 @@
                           $duration = $_POST['duration'];
                           $price = $_POST['price'];
                           $closingday = $_POST['closingday'];
-                          header("Location:dashboard.php?adding=succ");
+                          header("Location:kasidata.php?adding=succ");
                          $connection=mysqli_connect('localhost','root','','sundaramani-travels');
-                         $query ="INSERT INTO cuddalore (content,month,modeoftravel,duration,price,closingday) VALUES('$content','$month','$modeoftravel','$duration','$price','$closingday')";
+                         $query ="INSERT INTO kasitrip (content,month,modeoftravel,duration,price,closingday) VALUES('$content','$month','$modeoftravel','$duration','$price','$closingday')";
                          mysqli_query($connection,$query);
                         }
                         ?>
                   </div>  
              <div class="modal-body ">
-                  <form action="dashboard.php" method="post">
+                  <form action="kasidata.php" method="post">
                   <input name="from_post_flag" type="hidden" value="1">
                   <div class="mb-3">
                       <label for="name" class="form-label">content</label>
@@ -242,14 +242,14 @@
             </div>
       </div>
         <div style="margin-top:10px; margin-bottom:20px; margin-left:10px;">
-             <h2>Overview of CUDDALORE</h2>
+             <h2>Overview of kasi</h2>
         </div>
      
 
          <table>
               <?php 
                 $conn=mysqli_connect("localhost","root","","sundaramani-travels");
-                $sel_query="select * from cuddalore";
+                $sel_query="select * from kasitrip";
                 $result=mysqli_query($conn,$sel_query);
                 $row=mysqli_fetch_array($result);
                 ?>
@@ -274,7 +274,7 @@
 <script>
     function checkdelete(studid){
         if(confirm('Are you sure you want to delete')){
-            window.location.href="dashboard.php?id="+studid;
+            window.location.href="kasidata.php?id="+studid;
             return true;
         }
         else
