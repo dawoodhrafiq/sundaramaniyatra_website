@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Packages | Sundaramani Travels</title>
+  <title>Singapore - Malaysia Trip | Sundaramani Travels</title>
   <!-- PLUGINS CSS STYLE -->
   <link href="plugins/jquery-ui/jquery-ui.css" rel="stylesheet">
   <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,6 +25,8 @@
   <!-- CUSTOM CSS -->
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/colors/default.css" id="option_color">
+
+  <link rel="stylesheet" type="text/css" href="css/print.css">
 
   <!-- FAVICON -->
   <link rel="shortcut icon" type="image/png" href="img/home/logo-color-sm.png" />
@@ -101,7 +103,6 @@
       </nav>
     </header>
 
-
     <!-- PAGE TITLE -->
     <section class="pageTitle" style="background-image:url(img/home/pages/page-title-bg4.jpg);">
       <div class="container">
@@ -110,7 +111,7 @@
             <div class="titleTable">
               <div class="titleTableInner">
                 <div class="pageTitleInfo">
-                  <h1>Shirdi Trip</h1>
+                  <h1>Singapore - Malaysia Trip</h1>
                   <div class="under-border"></div>
                 </div>
               </div>
@@ -126,126 +127,33 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="generalInfo">
-            <?php
+              <?php
               $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
-              $sel_query = "select * from shirdi";
+              $sel_query = "select * from sing";
               $result = mysqli_query($conn, $sel_query);
               $row = mysqli_fetch_array($result);
               ?>
+
               <h2>General Information</h2>
-              <p><strong><?php echo $row['content']; ?><br>Also we have the darshan of Triyambakeshwar in Nashik, Panchavati, Ellora and Grishneswar. Then Vitobha Panduranga Darshan at Pandaripur and finally Sri Ragavendra Swami Mutt at Manthralayam.</strong></p>
+              <p> <strong><?php echo $row['content']; ?></strong> <br><br>
+              </p>
             </div>
           </div>
 
           <div class="col-xs-12">
             <div class="row">
               <div class="isotopeContainer" id="container">
-                <div class="col-sm-4 isotopeSelector africa">
-                  <article class="">
-                    <figure>
-                      <img src="img/shirdi/shirdi.jpg" alt="image">
-                      <div class="overlay-background">
-                        <div class="inner"></div>
-                      </div>
-                      <div class="overlay galleryMasonry">
-                        <a class="fancybox-pop" rel="portfolio-1" href="img/shirdi/shirdi.jpg">
-                          <span class="overlayInfo">
-                            <h2>shirdi</h2>
-                            <button class="btn buttonTransparent" type="button">view</button>
-                          </span>
-                        </a>
-                      </div>
-                    </figure>
-                  </article>
-                </div>
-
-                <div class="col-sm-4 isotopeSelector asia">
-                  <article class="">
-                    <figure>
-                      <img src="img/shirdi/nashik.jpg" alt="image">
-                      <div class="overlay-background">
-                        <div class="inner"></div>
-                      </div>
-                      <div class="overlay galleryMasonry">
-                        <a class="fancybox-pop" rel="portfolio-1" href="img/shirdi/nashik.jpg">
-                          <span class="overlayInfo">
-                            <h2>nashik</h2>
-                            <button class="btn buttonTransparent" type="button">view</button>
-                          </span>
-                        </a>
-                      </div>
-                    </figure>
-                  </article>
-                </div>
-
-                <div class="col-sm-4 isotopeSelector europe">
-                  <article class="">
-                    <figure>
-                      <img src="img/shirdi/mantralayam.jpg" alt="image">
-                      <div class="overlay-background">
-                        <div class="inner"></div>
-                      </div>
-                      <div class="overlay galleryMasonry">
-                        <a class="fancybox-pop" rel="portfolio-1" href="img/shirdi/mantralayam.jpg">
-                          <span class="overlayInfo">
-                            <h2>manthralayam</h2>
-                            <button class="btn buttonTransparent" type="button">view</button>
-                          </span>
-                        </a>
-                      </div>
-                    </figure>
-                  </article>
-                </div>
-
-                <div class="col-sm-4 isotopeSelector asia">
-                  <article class="">
-                    <figure>
-                      <img src="img/shirdi/ellora.jpg" alt="image">
-                      <div class="overlay-background">
-                        <div class="inner"></div>
-                      </div>
-                      <div class="overlay galleryMasonry">
-                        <a class="fancybox-pop" rel="portfolio-1" href="img/shirdi/ellora.jpg">
-                          <span class="overlayInfo">
-                            <h2>Ellora</h2>
-                            <button class="btn buttonTransparent" type="button">view</button>
-                          </span>
-                        </a>
-                      </div>
-                    </figure>
-                  </article>
-                </div>
-
-                <div class="col-sm-4 isotopeSelector europe">
-                  <article class="">
-                    <figure>
-                      <img src="img/shirdi/trimbakeshwar.jpg" alt="image">
-                      <div class="overlay-background">
-                        <div class="inner"></div>
-                      </div>
-                      <div class="overlay galleryMasonry">
-                        <a class="fancybox-pop" rel="portfolio-1" href="img/shirdi/trimbakeshwar.jpg">
-                          <span class="overlayInfo">
-                            <h2>trimbakeshwar</h2>
-                            <button class="btn buttonTransparent" type="button">view</button>
-                          </span>
-                        </a>
-                      </div>
-                    </figure>
-                  </article>
-                </div>
-
                 <div class="col-sm-4 isotopeSelector america">
                   <article class="">
                     <figure>
-                      <img src="img/shirdi/pandaripur.jpg" alt="image">
+                      <img src="img/mal-sing/batu caves.jpg" alt="image">
                       <div class="overlay-background">
                         <div class="inner"></div>
                       </div>
                       <div class="overlay galleryMasonry">
-                        <a class="fancybox-pop" rel="portfolio-1" href="img/shirdi/pandaripur.jpg">
+                        <a class="fancybox-pop" rel="portfolio-1" href="img/mal-sing/batu caves.jpg">
                           <span class="overlayInfo">
-                            <h2>pandaripur</h2>
+                            <h2>Batu Caves</h2>
                             <button class="btn buttonTransparent" type="button">view</button>
                           </span>
                         </a>
@@ -254,6 +162,119 @@
                   </article>
                 </div>
 
+                <div class="col-sm-4 isotopeSelector asia">
+                  <article class="">
+                    <figure>
+                      <img src="img/mal-sing/genting.jpg" alt="image">
+                      <div class="overlay-background">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="overlay galleryMasonry">
+                        <a class="fancybox-pop" rel="portfolio-1" href="img/mal-sing/genting.jpg">
+                          <span class="overlayInfo">
+                            <h2>Genting Highlands</h2>
+                            <button class="btn buttonTransparent" type="button">view</button>
+                          </span>
+                        </a>
+                      </div>
+                    </figure>
+                  </article>
+                </div>
+
+                <div class="col-sm-4 isotopeSelector africa">
+                  <article class="">
+                    <figure>
+                      <img src="img/mal-sing/twin tower.jpg" alt="image">
+                      <div class="overlay-background">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="overlay galleryMasonry">
+                        <a class="fancybox-pop" rel="portfolio-1" href="img/mal-sing/twin tower.jpg">
+                          <span class="overlayInfo">
+                            <h2>Twin Tower</h2>
+                            <button class="btn buttonTransparent" type="button">view</button>
+                          </span>
+                        </a>
+                      </div>
+                    </figure>
+                  </article>
+                </div>
+
+                <div class="col-sm-4 isotopeSelector africa">
+                  <article class="">
+                    <figure>
+                      <img src="img/mal-sing/universal studio.jpg" alt="image">
+                      <div class="overlay-background">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="overlay galleryMasonry">
+                        <a class="fancybox-pop" rel="portfolio-1" href="img/mal-sing/universal studio.jpg">
+                          <span class="overlayInfo">
+                            <h2>Universal Studio</h2>
+                            <button class="btn buttonTransparent" type="button">view</button>
+                          </span>
+                        </a>
+                      </div>
+                    </figure>
+                  </article>
+                </div>
+
+                <div class="col-sm-4 isotopeSelector asia">
+                  <article class="">
+                    <figure>
+                      <img src="img/mal-sing/sentosa.jpg" alt="image">
+                      <div class="overlay-background">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="overlay galleryMasonry">
+                        <a class="fancybox-pop" rel="portfolio-1" href="img/mal-sing/sentosa.jpg">
+                          <span class="overlayInfo">
+                            <h2>Sentosa Islands</h2>
+                            <button class="btn buttonTransparent" type="button">view</button>
+                          </span>
+                        </a>
+                      </div>
+                    </figure>
+                  </article>
+                </div>
+
+                <div class="col-sm-4 isotopeSelector asia">
+                  <article class="">
+                    <figure>
+                      <img src="img/mal-sing/merlion.jpg" alt="image">
+                      <div class="overlay-background">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="overlay galleryMasonry">
+                        <a class="fancybox-pop" rel="portfolio-1" href="img/mal-sing/merlion.jpg">
+                          <span class="overlayInfo">
+                            <h2>Merlion</h2>
+                            <button class="btn buttonTransparent" type="button">view</button>
+                          </span>
+                        </a>
+                      </div>
+                    </figure>
+                  </article>
+                </div>
+
+                <div class="col-sm-4 isotopeSelector europe">
+                  <article class="">
+                    <figure>
+                      <img src="img/mal-sing/sentosa1.jpg" alt="image">
+                      <div class="overlay-background">
+                        <div class="inner"></div>
+                      </div>
+                      <div class="overlay galleryMasonry">
+                        <a class="fancybox-pop" rel="portfolio-1" href="img/mal-sing/sentosa1.jpg">
+                          <span class="overlayInfo">
+                            <h2>Sentosa Islands</h2>
+                            <button class="btn buttonTransparent" type="button">view</button>
+                          </span>
+                        </a>
+                      </div>
+                    </figure>
+                  </article>
+                </div>
               </div>
               <!--container-->
             </div>
@@ -302,26 +323,37 @@
                         <div class="col-sm-8 col-xs-12">
                           <div class="commonInfo">
 
-                            <p><strong style="text-transform:uppercase;"><?php echo $row['duration']; ?> TRIP</strong> (Including train travel) <br>
-                              Local travel by AC Travellor, Non-AC accomodation and pure veg food provided. <br>
-                              <br><strong>STARTS/ ENDS IN</STRONG>: Chennai<br>
-                              <br><strong>PLACES</strong>: <br>
-                              SHIRDI <br>SHANISHINGNAPUR<br> NASHIK PANCHAVATI <br>THRIYAMBAKESWAR <br>PANDARIPUR <br>VITTAL MANDHIR<br>MANTHRALAYAM<br>PINJALA<br>PANCHAMUGI <br> NAVA BRINDHAVAN
-                            </p>
+                            <p><strong style="text-transform:uppercase;"><?php echo $row['duration']; ?></strong> (Including travel) <BR>
+                              <br><strong>STARTS/ ENDS IN</STRONG>: Chennai<br><br>
+                              <strong>PLACES IN SINGAPORE</strong><br>
+                              Buddha Temple<br>
+                              Merlion Park<br>
+                              Sentosa Islands<br>
+                              Bird's Park & Butterfly Park <br>
+                              Universal Studio<br>
+                              <br><strong>PLACES IN MALAYSIA</strong><BR>
+                              Kuala Lumpur City Tour<br>
+                              Putra Jaya<br>
+                              Genting Highlands<br>
+                              Batu Caves<br><br>
+
+
+
                           </div>
                         </div>
+
 
                         <div class="col-sm-4 col-xs-12">
                           <aside>
                             <div class="well booknow">
-                              <h3><strong>shirdi trip</strong></h3>
+                              <h3><strong>Singapore - Malaysia trip</strong></h3>
                               <ul class="list-unstyled">
 
                                 <li><span>MONTH: </span> <strong><?php echo $row['month']; ?></strong> </li>
                                 <li></i><span>MODE OF TRAVEL: </span> <strong><?php echo $row['modeoftravel']; ?></strong> </li>
                                 <li><span>DURATION:</span> <strong><?php echo $row['duration']; ?></strong> </li>
                                 <br>
-                                <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <strong><?php echo $row['price']; ?></strong> * </span> Per Person</li>
+                                <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <?php echo $row['price']; ?>* </span> Per Person</li>
                               </ul>
                               <a href="booking.html" class="btn buttonCustomPrimary">BOOK NOW</a>
                             </div>
@@ -329,20 +361,26 @@
                         </div>
                       </div>
                     </div>
-
                     <!--**********************************************************-->
                     <div role="tabpanel" class="tab-pane" id="itinerary">
                       <div class="row">
                         <div class="col-sm-8 col-xs-12">
                           <div class="commonInfo">
 
-                            <p><strong>Jan 29: </strong> Starting from Central station by Shirdi express (10.10am) Train no. 22601<br><br>
-                              <strong>Jan 30: </strong> Morning reaching Shirdi by 11.30am. Fresh up, taking lunch and then leaving to Shanishingapur and evening darshan at Baba temple by 8 pm. Night halt at Shirdi. <br><br>
-                              <strong>Jan 31: </strong> Morning after breakfast leaving to Panchavati by 8am. After visiting Nashik Panchavati, having lunch at Panchavati. Then leaving to Thriyambakeshwar. After darshan, evening train from Nashik road to Kalyan jn. Night train from Kalyan to Solapur.<br><br>
-                              <strong>Feb 1: </strong> Morning reach Solapur. From there vehicle Pandaripur. Taking holy bath at Chandrabagha river. After breakfast darshan at Vittal Mandhir. After lunch visiting local temples. Evening train from Solapur to Manthralayam. Night reach Manthralayam.<br><br>
-                              <strong>Feb 2: </strong> Morning visiting Pinjala and taking bath at Thunga. Then visiting Panchamugi and Manthralayam. Night stay at Manthralayam. <br><br>
-                              <strong>Feb 3: </strong> Early morning train from Manthralyam to Hosepete. Reach Hosepete by 10 am. Visit Nava Brindhavan. Night train from Hosepete to Renigunta.<br><br>
-                              <strong>Feb 4: </strong> Reach Renigunta. After breakfast next train from Renigunta to Chennai. Afternoon reach Chennai central.<br><br>
+
+                            <p>
+                              <button class="btn buttonTransparent" name="btnPDF" id="btnPDF" style="text-transform:capitalize;" onclick="downloadPDF()"><i class="fa fa-download" style="color:inherit;size:30px"></i> Download itinerary as PDF</button>
+                              <button class="btn buttonTransparent" name="btnPrint" id="btnPrint" style="text-transform:capitalize;" onclick="print()"><i class="fa fa-print" style="color:inherit;size:30px"></i> Print Itinerary</button>
+                            </p>
+                            <p>
+                              <strong>Day 1: </strong> Morning flight from Chennai to Malaysia. Arrive at KL airport. Proceed to Putrajaya sight seeing by cruise. Then check in hotel . Evening after fresh up visit Mutharamman temple and then go for shopping in Petaling street. Come back to hotel for dinner.<br><br>
+                              <strong>Day 2: </strong> Morning after breakfast proceed to full day city tour. Visit Petronas Tower, KL Tower, Merdeka Square, National Monument, National Mosque, King Palace, Sultan Abdul Samad Building, Thean Hou Temple and Dataran Gallery Pedarana. Night dinner at hotel.<br><br>
+                              <strong>Day 3: </strong> Morning after breakfast proceed to sight seeing. Visit Batu caves. Watch outlet and Genting Highlands. Proceed for dinner and back to hotel.<br><br>
+                              <strong>Day 4:</strong> Morning after breakfast, check out hotel and proceed to airport. Flight from Malaysia to Singapore. Arrival at Singapore Changi airport. Check in hotel. Fresh up and proceed to Singapore city tour. Visit China town, Bugis, Merlion, Esplanade, Arab street, Little India, Raffles place. Then visit world's first night safari. Dinner at restaurant. Night stay at hotel<br><br>
+                              <strong>Day 5: </strong> After breakfast proceed to sentosa. Visit Universal Studios. Packed lunch at Sentosa. Then visit wings of time show. Transfer back to hotel. Dinner at restaurant. Stay at hotel.<br><br>
+                              <strong>Day 6: </strong> Morning after breakfast proceed to Jurong Birds Park. After lunch visit gardens by the bay. Watch super tree light show. Dinner at restaurant. Stay at hotel.<br><br>
+                              <strong>Day 7: </strong> After breakfast proceed to Sentosa. Visit Madamme Tussade and images of Singapore. Proceed to 4D Adventure Land unlimited. Packed lunch at Sentosa. After lunch visit Sea Aquarium. Enjoy ride in cable car. Then proceed to hotel. Collect luggage and check out. Proceed to airport. Flight from Singapore to Chennai.<br><br>
+
                             </p>
                           </div>
                         </div>
@@ -351,14 +389,14 @@
                         <div class="col-sm-4 col-xs-12">
                           <aside>
                             <div class="well booknow">
-                              <h3><strong>shirdi trip</strong></h3>
+                              <h3><strong>Singapore - Malaysia trip</strong></h3>
                               <ul class="list-unstyled">
 
-                                <li><span>MONTH: </span> <strong><?php echo $row['month']; ?></strong> </li>
-                                <li></i><span>MODE OF TRAVEL: </span> <strong><?php echo $row['modeoftravel']; ?></strong> </li>
-                                <li><span>DURATION:</span> <strong><?php echo $row['duration']; ?></strong> </li>
+                                <li><span>MONTH: </span><?php echo $row['month']; ?></li>
+                                <li></i><span>MODE OF TRAVEL: </span><?php echo $row['modeoftravel']; ?></li>
+                                <li><span>DURATION:</span><?php echo $row['duration']; ?></li>
                                 <br>
-                                <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <strong><?php echo $row['price']; ?></strong> * </span> Per Person</li>
+                                <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"><?php echo $row['price']; ?>* </span> Per Person</li>
                               </ul>
                               <a href="booking.html" class="btn buttonCustomPrimary">BOOK NOW</a>
                             </div>
@@ -369,6 +407,8 @@
 
                       </div>
                     </div>
+
+                    <!--**********************************************************-->
 
                     <!--**********************************************************-->
 
@@ -376,25 +416,31 @@
                       <div class="row">
                         <div class="col-sm-8 col-xs-12">
                           <div class="commonInfo">
-                            <p><strong><i class="fa fa-check-circle" aria-hidden="true"></i> Package Fare Includes:</strong><br><br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> III AC Train ticket <br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Breakfast, Lunch, Dinner, Snacks & tea throughout the trip (Vegetarian Only)<br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> AC Vehicle Travel on road <br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Non AC accommodation (Twin Sharing)<br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Driver allowance / Toll / Parking charges<br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Incidental charges<br><br>
+                            <p><strong><i class="fa fa-check-circle" aria-hidden="true"></i>
 
+
+                                Package Fare Includes:</strong><br><br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Visa charges <br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Hotel Accomodation (Twin Sharing) with breakfast <br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> 16 seater transport with experience and knowledge driver <br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Breakfast, lunch and dinner<br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Entrance fee for all sight seeing mentioned. (Malaysia & Singapore)<br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Private transfer for all attractions in Singapore <br><br>
 
                               <i class="fa fa-times-circle" aria-hidden="true"></i><strong> Package Fare Excludes: </strong> <br><br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> To perform rituals<br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Special entrance ticket<br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Travel insurance<br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Telephone calls<br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Laundry charges<br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Porter charges<br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Dolly charges<br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Camera and photo charges <br>
-                              <i class="fa fa-caret-right" aria-hidden="true"></i> Any other expenses/activity that is not part of the itinerary.<br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Medical expenses<br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Attraction tickets apart from mentioned above<br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Incidental charges<br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Any penalty form hotel or government<br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Insurance charges<br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> In room dining, mini bar if any<br><br>
+
+                              <i class="fa fa-times-circle" aria-hidden="true"></i><strong> Cancellation Policy: </strong> <br><br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> No show - No refund at any point of time<br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Rescheduling could be negotiated case by case subject to availability at
+                              various ends. Will incur additional cost<br>
+                              <i class="fa fa-caret-right" aria-hidden="true"></i> Only 20% refund is possible for last minute cancellation<br>
+
                             </p>
 
                           </div>
@@ -404,14 +450,14 @@
                         <div class="col-sm-4 col-xs-12">
                           <aside>
                             <div class="well booknow">
-                              <h3><strong>shirdi trip</strong></h3>
+                              <h3><strong>Singapore - Malaysia trip</strong></h3>
                               <ul class="list-unstyled">
 
-                                <li><span>MONTH: </span> <strong><?php echo $row['month']; ?></strong> </li>
-                                <li></i><span>MODE OF TRAVEL: </span> <strong><?php echo $row['modeoftravel']; ?></strong> </li>
-                                <li><span>DURATION:</span> <strong><?php echo $row['duration']; ?></strong> </li>
+                                <li><span>MONTH: </span> <strong><?php echo $row['month']; ?></strong></li>
+                                <li></i><span>MODE OF TRAVEL: </span> <strong><?php echo $row['modeoftravel']; ?></strong></li>
+                                <li><span>DURATION:</span> <strong><?php echo $row['duration']; ?></strong></li>
                                 <br>
-                                <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <strong><?php echo $row['price']; ?></strong> * </span> Per Person</li>
+                                <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <?php echo $row['price']; ?>* </span> Per Person</li>
                               </ul>
                               <a href="booking.html" class="btn buttonCustomPrimary">BOOK NOW</a>
                             </div>
@@ -445,14 +491,14 @@
                         <div class="col-sm-4 col-xs-12">
                           <aside>
                             <div class="well booknow">
-                              <h3><strong>shirdi trip</strong></h3>
+                              <h3><strong>Singapore - Malaysia trip</strong></h3>
                               <ul class="list-unstyled">
 
-                                <li><span>MONTH: </span> <strong><?php echo $row['month']; ?></strong> </li>
-                                <li></i><span>MODE OF TRAVEL: </span> <strong><?php echo $row['modeoftravel']; ?></strong> </li>
-                                <li><span>DURATION:</span> <strong><?php echo $row['duration']; ?></strong> </li>
+                                <li><span>MONTH: </span> <strong><?php echo $row['month']; ?></strong></li>
+                                <li></i><span>MODE OF TRAVEL: </span> <strong><?php echo $row['modeoftravel']; ?></strong></li>
+                                <li><span>DURATION:</span> <strong><?php echo $row['duration']; ?></strong></li>
                                 <br>
-                                <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <strong><?php echo $row['price']; ?></strong> * </span> Per Person</li>
+                                <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <?php echo $row['price']; ?>* </span> Per Person</li>
                               </ul>
                               <a href="booking.html" class="btn buttonCustomPrimary">BOOK NOW</a>
                             </div>
@@ -469,12 +515,14 @@
                 </div>
               </div>
               <div class="col-xs-12">
-                <p class="text-muted"><strong>*</strong> Final cost depends on the number of travellers, category of stay and mode of travel.</p>
+                <p class="text-muted"><strong>*</strong> Includes Food, Attractions tickets, Transportation and Accomodation.<br>
+                  Flight charges actuals, visa and insurance charges extra.
+                </p>
               </div>
               <div class="row">
                 <div class="col-xs-12">
                   <div class="btnArea">
-                    <a href="packages.php" class="btn buttonTransparent"><i class="fa fa-caret-left" aria-hidden="true"></i> back to tour packages</a>
+                    <a href="packages.html" class="btn buttonTransparent"><i class="fa fa-caret-left" aria-hidden="true"></i> back to tour packages</a>
                   </div>
                 </div>
               </div>
@@ -486,34 +534,36 @@
             <div class="relatedProduct">
               <h2>you may also like</h2>
               <div class="row">
+
                 <div class="col-sm-4 col-xs-12">
                   <div class="relatedItem">
-                    <img src="img/home/packages/packages-3.jpg" alt="related image">
+                    <img src="img/home/packages/packages-2.jpg" alt="related image">
                     <div class="maskingInfo">
-                      <h4>Udupi Trip</h4>
-                      <p>6 Days</p>
-                      <a href="udupi.php" class="btn buttonTransparent">view more</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-sm-4 col-xs-12">
-                  <div class="relatedItem">
-                    <img src="img/home/packages/packages-4.jpg" alt="related image">
-                    <div class="maskingInfo">
-                      <h4>Divyadesam - Phase I</h4>
-                      <p>4 Days</p>
-                      <a href="divyadesam.php" class="btn buttonTransparent">view more</a>
+                      <h4>Shirdi Trip</h4>
+                      <p>7 Days</p>
+                      <a href="shirdi.html" class="btn buttonTransparent">view more</a>
                     </div>
                   </div>
                 </div>
 
                 <div class="col-sm-4 col-xs-12">
                   <div class="relatedItem">
-                    <img src="img/home/packages/packages-5.jpg" alt="related image">
+                    <img src="img/home/packages/packages-3.jpg" alt="related image">
                     <div class="maskingInfo">
-                      <h4>Panchabootha Sthalam</h4>
+                      <h4>Udupi Trip</h4>
                       <p>6 Days</p>
-                      <a href="panchabootham.php" class="btn buttonTransparent">view more</a>
+                      <a href="udupi.html" class="btn buttonTransparent">view more</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4 col-xs-12">
+                  <div class="relatedItem">
+                    <img src="img/home/packages/packages-4.jpg" alt="related image">
+                    <div class="maskingInfo">
+                      <h4>Divyadesam - Phase I</h4>
+                      <p>4 Days</p>
+                      <a href="divyadesam.html" class="btn buttonTransparent">view more</a>
                     </div>
                   </div>
                 </div>
@@ -521,9 +571,9 @@
             </div>
           </div>
         </div>
+
       </div>
     </sectio>
-
 
     <!-- FOOTER INNER -->
     <footer>
@@ -574,7 +624,7 @@
                     <a class="fancybox-pop" href="img/home/packages/packages-6.jpg"><img src="img/home/packages/packages-6.jpg" width="83" height="73" alt="image"></a>
                   </div>
 
-                </div>
+                </div>m
               </div>
             </div>
             <div class="col-sm-3 col-xs-12">
@@ -603,7 +653,7 @@
             <div class="col-sm-6 col-sm-push-6 col-xs-12">
               <ul class="list-inline">
                 <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="packages.php">Tour Packages</a></li>
+                <li><a href="packages.html">Tour Packages</a></li>
                 <li><a href="contact.html">Enquiry</a></li>
               </ul>
             </div>
@@ -634,6 +684,25 @@
   <script src="plugins/isotope/isotope-triger.js"></script>
   <script src="plugins/countdown/jquery.syotimer.js"></script>
   <script src="js/custom.js"></script>
+
+  <script>
+    function downloadPDF() {
+      var link = document.createElement('a');
+      link.href = "img/itinerary.pdf";
+      link.download = 'itinerary.pdf';
+      link.dispatchEvent(new MouseEvent('click'));
+    }
+
+    function print() {
+      alert("set");
+      var objFra = document.createElement('iframe'); // Create an IFrame.
+      objFra.style.visibility = "hidden"; // Hide the frame.
+      objFra.src = "img/itinerary.pdf"; // Set source.
+      document.body.appendChild(objFra); // Add the frame to the web page.
+      objFra.contentWindow.focus(); // Set focus.
+      objFra.contentWindow.print(); // Print it.
+    }
+  </script>
 </body>
 
 </html>
