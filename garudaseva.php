@@ -597,7 +597,7 @@
             </div>
             <div class="col-sm-6 col-sm-pull-6 col-xs-12">
               <div class="copyRightText">
-                <p>Copyright © 2017 Sundaramani Travels. Designed by <a target="_blank" href="http://www.h2kcoderz.in/">H2KCoderz</a>.</p>
+                <p>Copyright © 2022-2023 Sundaramani Travels. Designed by <a target="_blank" href="https://webbird.co.in/">webbird</a>.</p>
               </div>
             </div>
           </div>

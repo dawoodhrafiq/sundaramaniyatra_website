@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- SITE TITTLE -->
@@ -19,14 +20,14 @@
 
   <!-- GOOGLE FONT -->
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-   <link href="https://fonts.googleapis.com/css?family=Arvo:700i" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css?family=Arvo:700i" rel="stylesheet">
+
   <!-- CUSTOM CSS -->
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/colors/default.css" id="option_color">
 
   <!-- FAVICON -->
-  <link rel="shortcut icon" type="image/png" href="img/home/logo-color-sm.png"/>
+  <link rel="shortcut icon" type="image/png" href="img/home/logo-color-sm.png" />
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +42,7 @@
   <div class="main-wrapper">
 
     <!-- HEADER -->
-     <!-- HEADER -->
+    <!-- HEADER -->
     <header>
       <nav class="navbar navbar-default navbar-main navbar-fixed-top lightHeader" role="navigation">
         <div class="container">
@@ -56,21 +57,21 @@
             </button>
             <a class="navbar-brand" href="index.html"></a>
           </div>
-      
+
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
-               <li class="dropdown singleDrop">
+              <li class="dropdown singleDrop">
                 <a href="index.html">Home</a>
               </li>
-               
-               <li class="dropdown singleDrop">
+
+              <li class="dropdown singleDrop">
                 <a href="aboutus.html">About Us</a>
-              </li> 
+              </li>
 
               <li class="active dropdown singleDrop">
                 <a href="packages.php">Tour Packages</a>
-              </li> 
+              </li>
 
               <li class="dropdown singleDrop">
                 <a href="gallery.html">Gallery</a>
@@ -78,13 +79,13 @@
 
               <li class="dropdown singleDrop">
                 <a href="booking.html">Book Now</a>
-              </li>                         
+              </li>
 
               <li class="dropdown singleDrop">
                 <a href="contact.html">Contact Us</a>
-              </li> 
+              </li>
               <li class="dropdown searchBox">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <li>
                     <span class="input-group">
@@ -95,11 +96,11 @@
                 </ul>
               </li>
             </ul>
-          </div>          
+          </div>
         </div>
       </nav>
-    </header>   
- 
+    </header>
+
 
 
 
@@ -150,7 +151,7 @@
           <div class="col-xs-12">
 
 
-          	  <div class="media packagesList">
+            <div class="media packagesList">
               <a class="media-left fancybox-pop" href="img/home/packages/packages-21.jpg">
                 <img class="media-object" src="img/home/packages/packages-21.jpg" alt="Image">
               </a>
@@ -167,25 +168,31 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
                   </div>
-                  <p>Cuddalore is famous for temples such as Thiruvakkarai vakkrakali amman, Mailam murugan temple, Panchavati anjaneyar temple, Singirikudi narasimmar temple, Manakula vinayagartemple, Thiruvahindipuram Devanatha swamy etc.   </p>
-                  <ul class="list-inline detailsBtn">  
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Mar 20 - Mar 21, 2021</span></li>                 
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 days</span></li>
+                  <?php
+                  $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                  $sel_query = "select * from cuddalore";
+                  $result = mysqli_query($conn, $sel_query);
+                  $row = mysqli_fetch_array($result);
+                  ?>
+                  <p><strong><?php echo $row['content']; ?></strong></p>
+                  <ul class="list-inline detailsBtn">
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
                   </ul>
                 </div>
                 <div class="bodyRight">
-                  <div class="bookingDetails">               
-                   
+                  <div class="bookingDetails">
+
                     <a href="cuddalore.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                   <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
             </div>
 
 
-             <div class="media packagesList">
+            <div class="media packagesList">
 
               <a class="media-left fancybox-pop" href="img/home/packages/packages-1.jpg">
 
@@ -218,16 +225,20 @@
                     </ul>
 
                   </div>
+                  <?php
+                  $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                  $sel_query = "select * from kasitrip";
+                  $result = mysqli_query($conn, $sel_query);
+                  $row = mysqli_fetch_array($result);
+                  ?>
 
-                  <p>As per Hindu mythology seven holy places gives mukthi. Among the seven, Kasi is the prime Shethra. Allahabad is an important place to remove our sins by doing rituals at Triveni sangamam. Gaya is the place where we satisfy our ancestors by doing rituals at Vishnu padam.
-
-</p>
+                  <p><strong><?php echo $row['content']; ?></strong></p>
 
                   <ul class="list-inline detailsBtn">
 
-                  <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Apr 2 - Apr 7, 2021</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
 
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
 
                   </ul>
 
@@ -235,7 +246,7 @@
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                   
+                  <div class="bookingDetails">
 
                     <a href="kasi.php" class="btn buttonTransparent clearfix">Details</a>
 
@@ -257,7 +268,7 @@
               </a>
               <div class="media-body">
                 <div class="bodyLeft">
-                  <h4 class="media-heading"><a href="singapore-malaysia.html">Singapore - Malaysia Trip</a></h4>
+                  <h4 class="media-heading"><a href="singapore-malaysia.php">Singapore - Malaysia Trip</a></h4>
                   <div class="countryRating">
                     <span>Singapore - Malaysia</span>
                     <ul class="list-inline rating">
@@ -268,25 +279,25 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
                   </div>
-                  <p>This combined Singapore Malaysia tour package takes you to the favourite tourist destinations of South East Asia. A wonderful tour that introduces you to the diverse culture, landscapes and various sightseeing places of the two countries.  </p>
-                  <ul class="list-inline detailsBtn">  
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> May 18 - May 24, 2020</span></li>                 
+                  <p>This combined Singapore Malaysia tour package takes you to the favourite tourist destinations of South East Asia. A wonderful tour that introduces you to the diverse culture, landscapes and various sightseeing places of the two countries. </p>
+                  <ul class="list-inline detailsBtn">
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> May 18 - May 24, 2020</span></li>
                     <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 7 days</span></li>
                   </ul>
                 </div>
                 <div class="bodyRight">
-                  <div class="bookingDetails">               
-                   
-                    <a href="singapore-malaysia.html" class="btn buttonTransparent clearfix">Details</a>
+                  <div class="bookingDetails">
+
+                    <a href="singapore-malaysia.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                   <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
             </div>
 
 
-             <div class="media packagesList">
+            <div class="media packagesList">
 
               <a class="media-left fancybox-pop" href="img/home/packages/packages-20.jpg">
 
@@ -321,13 +332,13 @@
                   </div>
 
                   <p>Every year in Thirunaangur, 11 Garuda seva Utsav is performed.
-Perumal from 11 different places in and around Sirkali gather at the Pandal before Manimadakoil followed by Azhwar’s mangalasasanam. Pancha Narasimha Kshetrams in Seerkazhi,  where Lord Narasimhar bless in his five forms. 
+                    Perumal from 11 different places in and around Sirkali gather at the Pandal before Manimadakoil followed by Azhwar’s mangalasasanam. Pancha Narasimha Kshetrams in Seerkazhi, where Lord Narasimhar bless in his five forms.
 
-</p>
+                  </p>
 
                   <ul class="list-inline detailsBtn">
 
-                  <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Jan 25 - Jan 26, 2020</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Jan 25 - Jan 26, 2020</span></li>
 
                     <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 days</span></li>
 
@@ -337,7 +348,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                   
+                  <div class="bookingDetails">
 
                     <a href="garudaseva.php" class="btn buttonTransparent clearfix">Details</a>
 
@@ -356,7 +367,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
 
 
-             <div class="media packagesList">
+            <div class="media packagesList">
 
               <a class="media-left fancybox-pop" href="img/home/packages/packages-18.jpg">
 
@@ -390,13 +401,13 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                   </div>
 
-                  <p>There are nine temples of Lord Narasimha in Ahobilam which house the self-manifested Deities of the Lord.  Lord Shiva in Srisailam temple is referred to as one of the twelve Jyotirlingas.  This temple is classified as one of the Paadal Petra Sthalam.  Mahanandi is one of the Nava Nandis.
+                  <p>There are nine temples of Lord Narasimha in Ahobilam which house the self-manifested Deities of the Lord. Lord Shiva in Srisailam temple is referred to as one of the twelve Jyotirlingas. This temple is classified as one of the Paadal Petra Sthalam. Mahanandi is one of the Nava Nandis.
 
-</p>
+                  </p>
 
                   <ul class="list-inline detailsBtn">
 
-                  <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Feb 15 - Feb 18, 2020</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Feb 15 - Feb 18, 2020</span></li>
 
                     <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 4 days</span></li>
 
@@ -406,7 +417,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                   
+                  <div class="bookingDetails">
 
                     <a href="ahobilam.php" class="btn buttonTransparent clearfix">Details</a>
 
@@ -423,7 +434,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
             </div>
 
 
-          	
+
 
             <div class="media packagesList">
 
@@ -463,7 +474,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                   <ul class="list-inline detailsBtn">
 
-                  <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Jan 29 - Feb 4, 2020</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Jan 29 - Feb 4, 2020</span></li>
 
                     <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 7 days</span></li>
 
@@ -473,7 +484,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                 
+                  <div class="bookingDetails">
 
                     <a href="shirdi.php" class="btn buttonTransparent clearfix">Details</a>
 
@@ -529,7 +540,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                     <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Mar 7 - Mar 11, 2020</span></li>
 
-                     <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 5 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 5 days</span></li>
 
                   </ul>
 
@@ -537,15 +548,15 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">              
+                  <div class="bookingDetails">
 
-                   
+
 
                     <a href="udupi.php" class="btn buttonTransparent clearfix">Details</a>
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-          <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -553,7 +564,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
               </div>
 
-            </div>    
+            </div>
 
 
 
@@ -575,23 +586,23 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
                     </ul>
                   </div>
                   <p>Apart from 108 Divyadesams, even more significant places of Lord Vishnu are there. Lord Vishnu has showered his blessings in the form of Rama in Bhadrachalam, Sathyanarayana at Annavaram, Koormanathaswamy at Srikakulam etc. </p>
-                  <ul class="list-inline detailsBtn">  
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Mar 12 - Mar 15, 2020</span></li>                 
+                  <ul class="list-inline detailsBtn">
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Mar 12 - Mar 15, 2020</span></li>
                     <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 4 days</span></li>
                   </ul>
                 </div>
                 <div class="bodyRight">
-                  <div class="bookingDetails">               
-                   
+                  <div class="bookingDetails">
+
                     <a href="bhadrachalam.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                   <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
             </div>
 
-             <div class="media packagesList">
+            <div class="media packagesList">
 
               <a class="media-left fancybox-pop" href="img/home/packages/packages-8.jpg">
 
@@ -625,19 +636,19 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                   </div>
 
-                  <p>Mathura also known as Krishnajanmaboomi. Pilgrimage to Mata Vaishnodevi is one of the holiest.  Ayodhya is also known as Rama Janmaboomi.  Naimisaranyam is the place where 18 puranas were told Suthbouranikar. Chakra theertham is an important theertham.</p>
+                  <p>Mathura also known as Krishnajanmaboomi. Pilgrimage to Mata Vaishnodevi is one of the holiest. Ayodhya is also known as Rama Janmaboomi. Naimisaranyam is the place where 18 puranas were told Suthbouranikar. Chakra theertham is an important theertham.</p>
 
-               <ul class="list-inline detailsBtn">
+                  <ul class="list-inline detailsBtn">
 
-                  <!--<li><span class="textInfo"><i class="fa fa-train" aria-hidden="true"></i> Feb 22 - Mar 5, 2019</span></li>-->
-                  <li><span class="textInfo"><i class="fa fa-plane" aria-hidden="true"></i> Apr 20 - Apr 27, 2020</span></li>
-                             </ul>
+                    <!--<li><span class="textInfo"><i class="fa fa-train" aria-hidden="true"></i> Feb 22 - Mar 5, 2019</span></li>-->
+                    <li><span class="textInfo"><i class="fa fa-plane" aria-hidden="true"></i> Apr 20 - Apr 27, 2020</span></li>
+                  </ul>
 
                 </div>
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                   
+                  <div class="bookingDetails">
 
                     <a href="mathura.php" class="btn buttonTransparent clearfix">Details</a>
 
@@ -691,17 +702,17 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                   <p>"Mukthinath" word is derived from "Mukti" and "Nath". "Mukti" means "Salvation" and "Nath" means "God or Master". Mukti holds great significance for all spiritual people. Muktinath this Sanskrit name itself has religious overtone and a sort of emotional ring to it for the devout Hindus.</p>
 
-               <ul class="list-inline detailsBtn">
+                  <ul class="list-inline detailsBtn">
 
-                  <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Sep 4 - Sep 9, 2019</span></li>
-                   <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 days</span></li>
-                             </ul>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Sep 4 - Sep 9, 2019</span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 days</span></li>
+                  </ul>
 
                 </div>
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                   
+                  <div class="bookingDetails">
 
                     <a href="mukthinath.php" class="btn buttonTransparent clearfix">Details</a>
 
@@ -717,7 +728,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
             </div>
 
-             
+
             <div class="media packagesList">
               <a class="media-left fancybox-pop" href="img/home/packages/packages-4.jpg">
                 <img class="media-object" src="img/home/packages/packages-4.jpg" alt="Image">
@@ -735,25 +746,25 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
                   </div>
-                  <p>These are the 108 Vishnu temples. Of the 108 temples 105 are in India, 1 in Nepal and last two are out of earth (Thiruparkadal and Paramapadam). In India 84 temples in Tamilnadu, 11 in Kerala, 2 in Andhra Pradesh, 1 in Gujarat,  4 in Uttarpradesh and 3 temples in Uttarkhand. </p>
-                  <ul class="list-inline detailsBtn">  
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Dec 17 - Dec 22, 2019</span></li>                 
+                  <p>These are the 108 Vishnu temples. Of the 108 temples 105 are in India, 1 in Nepal and last two are out of earth (Thiruparkadal and Paramapadam). In India 84 temples in Tamilnadu, 11 in Kerala, 2 in Andhra Pradesh, 1 in Gujarat, 4 in Uttarpradesh and 3 temples in Uttarkhand. </p>
+                  <ul class="list-inline detailsBtn">
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Dec 17 - Dec 22, 2019</span></li>
                     <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 days</span></li>
                   </ul>
                 </div>
                 <div class="bodyRight">
-                  <div class="bookingDetails">               
-                   
+                  <div class="bookingDetails">
+
                     <a href="divyadesam-2.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                   <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
             </div>
 
-            
-             <div class="media packagesList">
+
+            <div class="media packagesList">
 
               <a class="media-left fancybox-pop" href="img/home/packages/packages-16.jpg">
 
@@ -789,17 +800,17 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                   <p>The Divya Desams (sacred places) are 108 temples that are regarded by Srivaishnavite Hindus as being of special holiness. There are 18 Divya Desams based on Pandya nadu out of which 9 divyadesams are called Nava Tirupathi temples.</p>
 
-               <ul class="list-inline detailsBtn">
+                  <ul class="list-inline detailsBtn">
 
-                  <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Jul 22 - Jul 25, 2019</span></li>
-                 
-                             </ul>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Jul 22 - Jul 25, 2019</span></li>
+
+                  </ul>
 
                 </div>
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                   
+                  <div class="bookingDetails">
 
                     <a href="pandyanadu.php" class="btn buttonTransparent clearfix">Details</a>
 
@@ -849,19 +860,19 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                   </div>
 
-                  <p>The Divya Desams (sacred places) are 108 temples that are regarded by Srivaishnavite Hindus as being of special holiness. These Divya Desams were praised by the 12 Alvars, the ultimate devotees of Lord Vishnu.  There are 11 Divya Desams based on Malai nadu the ancient Kerala.</p>
+                  <p>The Divya Desams (sacred places) are 108 temples that are regarded by Srivaishnavite Hindus as being of special holiness. These Divya Desams were praised by the 12 Alvars, the ultimate devotees of Lord Vishnu. There are 11 Divya Desams based on Malai nadu the ancient Kerala.</p>
 
-               <ul class="list-inline detailsBtn">
+                  <ul class="list-inline detailsBtn">
 
-                  <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Nov 14 - Nov 19, 2019</span></li>
-                 
-                             </ul>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Nov 14 - Nov 19, 2019</span></li>
+
+                  </ul>
 
                 </div>
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                   
+                  <div class="bookingDetails">
 
                     <a href="malainadu.php" class="btn buttonTransparent clearfix">Details</a>
 
@@ -877,11 +888,11 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
             </div>
 
-            
-              
-            
-             
-             <div class="media packagesList">
+
+
+
+
+            <div class="media packagesList">
 
               <a class="media-left fancybox-pop" href="img/home/packages/packages-13.jpg">
 
@@ -929,7 +940,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                 
+                  <div class="bookingDetails">
 
                     <a href="pandaripuram.php" class="btn buttonTransparent clearfix">Details</a>
 
@@ -947,7 +958,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
 
 
-             <div class="media packagesList">
+            <div class="media packagesList">
 
               <a class="media-left fancybox-pop" href="img/home/packages/packages-12.jpg">
 
@@ -995,7 +1006,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                 
+                  <div class="bookingDetails">
 
                     <a href="thulakaveri.php" class="btn buttonTransparent clearfix">Details</a>
 
@@ -1013,7 +1024,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
 
 
-           
+
 
 
             <div class="media packagesList">
@@ -1050,7 +1061,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                   </div>
 
-                  <p> This trip covers Nava Tirupati and Nava Kailayam temples.  Also covers Kutrallam falls, Kutralanathar temple, Nellaiyappar temple and Thenkasi Viswanathar temple.</p>
+                  <p> This trip covers Nava Tirupati and Nava Kailayam temples. Also covers Kutrallam falls, Kutralanathar temple, Nellaiyappar temple and Thenkasi Viswanathar temple.</p>
 
                   <ul class="list-inline detailsBtn">
 
@@ -1064,7 +1075,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                 
+                  <div class="bookingDetails">
 
                     <a href="navatirupati.php" class="btn buttonTransparent clearfix">Details</a>
 
@@ -1082,61 +1093,61 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
 
 
 
-           
-       
-        
-            
 
-                  
 
-        <div class="row">
 
-          <div class="col-xs-12">
 
-            <div class="paginationCenter">
 
-              <ul class="pagination">
 
-                <li>
 
-                  <a href="#" aria-label="Previous">
+            <div class="row">
 
-                    <span aria-hidden="true"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Previous</span>
+              <div class="col-xs-12">
 
-                  </a>
+                <div class="paginationCenter">
 
-                </li>
+                  <ul class="pagination">
 
-                <li class="active"><a href="#">1</a></li>
+                    <li>
 
-                <li><a href="packages-2.php">2</a></li>
+                      <a href="#" aria-label="Previous">
 
-                             
+                        <span aria-hidden="true"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Previous</span>
 
-                <li>
+                      </a>
 
-                  <a href="packages-2.php" aria-label="Next">
+                    </li>
 
-                    <span aria-hidden="true">Next<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+                    <li class="active"><a href="#">1</a></li>
 
-                  </a>
+                    <li><a href="packages-2.php">2</a></li>
 
-                </li>
 
-              </ul>
+
+                    <li>
+
+                      <a href="packages-2.php" aria-label="Next">
+
+                        <span aria-hidden="true">Next<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+
+                      </a>
+
+                    </li>
+
+                  </ul>
+
+                </div>
+
+              </div>
 
             </div>
 
           </div>
 
-        </div>
-
-      </div>
-
     </section>
 
 
-<!-- FOOTER INNER -->
+    <!-- FOOTER INNER -->
     <footer>
       <!-- FOOTER -->
       <div class="footer clearfix">
@@ -1145,17 +1156,17 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
             <div class="col-sm-3 col-xs-12">
               <div class="footerContent">
                 <a href="index.html" class="footer-logo"><img src="img/home/logo-color-sm.png" alt="footer-logo"><span class="footer-logo-title">Sundaramani Travels</span></a>
-           <p>A pilgrimage is a journey in search of moral and spiritual significance.
-           India is covered by many holy sites and with sacred rivers.  Going on a pilgrimage is considered as a good Karma. Our motto is to take people to these holy places across India in a most convenient way and with utmost care.</p>
+                <p>A pilgrimage is a journey in search of moral and spiritual significance.
+                  India is covered by many holy sites and with sacred rivers. Going on a pilgrimage is considered as a good Karma. Our motto is to take people to these holy places across India in a most convenient way and with utmost care.</p>
               </div>
-                     </div>
+            </div>
             <div class="col-sm-3 col-xs-12">
               <div class="footerContent">
                 <h5>contact us</h5>
                 <p>For support or any questions, please get in touch with us!</p>
                 <ul class="list-unstyled">
                   <li><i class="fa fa-home" aria-hidden="true"></i>Invicon Silver Springs <br>
-                   Krishna Nagar 6th street <br>Tambaram West, Chennai 600 0045</li>
+                    Krishna Nagar 6th street <br>Tambaram West, Chennai 600 0045</li>
                   <li><i class="fa fa-phone" aria-hidden="true"></i>+91 8667475644, +91 9940056963</li>
                   </i></li>
                   <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailTo:sundaramanitravels@gmail.com">sundaramanitravels@gmail.com</a></li>
@@ -1167,26 +1178,26 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
                 <h5>Gallery</h5>
                 <div class="row">
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-1.jpg"><img src="img/home/packages/packages-1.jpg " width="83" height= "73" alt="image"></a>
+                    <a class="fancybox-pop" href="img/home/packages/packages-1.jpg"><img src="img/home/packages/packages-1.jpg " width="83" height="73" alt="image"></a>
                   </div>
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-2.jpg"><img src="img/home/packages/packages-2.jpg" width="83" height= "73" alt="image"></a>
+                    <a class="fancybox-pop" href="img/home/packages/packages-2.jpg"><img src="img/home/packages/packages-2.jpg" width="83" height="73" alt="image"></a>
                   </div>
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-3.jpg"><img src="img/home/packages/packages-3.jpg" width="83" height= "73" alt="image"></a>
+                    <a class="fancybox-pop" href="img/home/packages/packages-3.jpg"><img src="img/home/packages/packages-3.jpg" width="83" height="73" alt="image"></a>
                   </div>
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-4.jpg"><img src="img/home/packages/packages-4.jpg" width="83" height= "73" alt="image"></a>
+                    <a class="fancybox-pop" href="img/home/packages/packages-4.jpg"><img src="img/home/packages/packages-4.jpg" width="83" height="73" alt="image"></a>
                   </div>
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-5.jpg"><img src="img/home/packages/packages-5.jpg" width="83" height= "73"alt="image"></a>
+                    <a class="fancybox-pop" href="img/home/packages/packages-5.jpg"><img src="img/home/packages/packages-5.jpg" width="83" height="73" alt="image"></a>
                   </div>
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-6.jpg"><img src="img/home/packages/packages-6.jpg" width="83" height= "73" alt="image"></a>
-                  </div>           
-             
+                    <a class="fancybox-pop" href="img/home/packages/packages-6.jpg"><img src="img/home/packages/packages-6.jpg" width="83" height="73" alt="image"></a>
+                  </div>
+
+                </div>
               </div>
-            </div>
             </div>
             <div class="col-sm-3 col-xs-12">
               <div class="footerContent">
@@ -1215,19 +1226,19 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
               <ul class="list-inline">
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="packages.php">Tour Packages</a></li>
-                <li><a href="contact.html">Enquiry</a></li>                
+                <li><a href="contact.html">Enquiry</a></li>
               </ul>
             </div>
             <div class="col-sm-6 col-sm-pull-6 col-xs-12">
               <div class="copyRightText">
-                <p>Copyright © 2017 Sundaramani Travels. Designed by <a target="_blank" href="http://www.h2kcoderz.in/">H2KCoderz</a>.</p>
+                <p>Copyright © 2022-2023 Sundaramani Travels. Designed by <a target="_blank" href="https://webbird.co.in/">webbird</a>.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
-   </div>
+  </div>
 
 
   <!-- JAVASCRIPTS -->
@@ -1244,7 +1255,7 @@ Perumal from 11 different places in and around Sirkali gather at the Pandal befo
   <script src="plugins/isotope/jquery.fancybox.pack.js"></script>
   <script src="plugins/isotope/isotope-triger.js"></script>
   <script src="plugins/countdown/jquery.syotimer.js"></script>
-  <script src="js/custom.js"></script> 
+  <script src="js/custom.js"></script>
 </body>
 
 </html>

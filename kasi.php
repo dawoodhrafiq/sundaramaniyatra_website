@@ -132,7 +132,7 @@
               $result = mysqli_query($conn, $sel_query);
               $row = mysqli_fetch_array($result);
               ?>
-              <p><strong><?php echo $row['content']; ?></strong><br><br>
+              <p><strong>Kasi yatra is holy and superior of yatras. Performance of rituals on the bank of Ganga at Kasi, Gaya and Allahabad takes on an entirely new significance.</strong><br><br>
                 <strong>Kasi :</strong> <strong><?php echo $row['content']; ?></strong> <br>
                 <strong>Allahabad :</strong> Also known as Prayagai, is an important place to remove our sins by doing rituals at Triveni sangamam.<br>
                 <strong>Gaya :</strong> Gaya is the place where we satisfy our ancestors by doing rituals at Vishnu Padam.<br><br>
@@ -613,7 +613,7 @@
             </div>
             <div class="col-sm-6 col-sm-pull-6 col-xs-12">
               <div class="copyRightText">
-                <p>Copyright © 2017 Sundaramani Travels. Designed by <a target="_blank" href="http://www.h2kcoderz.in/">H2KCoderz</a>.</p>
+                <p>Copyright © 2022-2023 Sundaramani Travels. Designed by <a target="_blank" href="https://webbird.co.in/">webbird</a>.</p>
               </div>
             </div>
           </div>
