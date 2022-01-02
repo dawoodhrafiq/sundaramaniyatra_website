@@ -82,7 +82,7 @@
               </li>
 
               <li class="dropdown singleDrop">
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.php">Contact Us</a>
               </li>
               <li class="dropdown searchBox">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
@@ -125,12 +125,12 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-          <?php
-              $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
-              $sel_query = "select * from navatirupati";
-              $result = mysqli_query($conn, $sel_query);
-              $row = mysqli_fetch_array($result);
-              ?>
+            <?php
+            $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+            $sel_query = "select * from navatirupati";
+            $result = mysqli_query($conn, $sel_query);
+            $row = mysqli_fetch_array($result);
+            ?>
             <div class="generalInfo">
               <h2>General Information</h2>
               <strong>Nava Tirupati :</strong><?php echo $row['content']; ?> <br><br>
@@ -603,7 +603,7 @@
               <ul class="list-inline">
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="packages.php">Tour Packages</a></li>
-                <li><a href="contact.html">Enquiry</a></li>
+                <li><a href="contact.php">Enquiry</a></li>
               </ul>
             </div>
             <div class="col-sm-6 col-sm-pull-6 col-xs-12">

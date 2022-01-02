@@ -82,7 +82,7 @@
               </li>
 
               <li class="dropdown singleDrop">
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.php">Contact Us</a>
               </li>
               <li class="dropdown searchBox">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
@@ -185,7 +185,7 @@
 
                     <a href="cuddalore.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
@@ -252,7 +252,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -270,6 +270,12 @@
                 <div class="bodyLeft">
                   <h4 class="media-heading"><a href="singapore-malaysia.php">Singapore - Malaysia Trip</a></h4>
                   <div class="countryRating">
+                    <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from sing";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
                     <span>Singapore - Malaysia</span>
                     <ul class="list-inline rating">
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -279,10 +285,10 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
                   </div>
-                  <p>This combined Singapore Malaysia tour package takes you to the favourite tourist destinations of South East Asia. A wonderful tour that introduces you to the diverse culture, landscapes and various sightseeing places of the two countries. </p>
+                  <p><strong><?php echo $row['content']; ?></strong> </p>
                   <ul class="list-inline detailsBtn">
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> May 18 - May 24, 2020</span></li>
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 7 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
                   </ul>
                 </div>
                 <div class="bodyRight">
@@ -290,7 +296,7 @@
 
                     <a href="singapore-malaysia.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
@@ -331,16 +337,20 @@
 
                   </div>
 
-                  <p>Every year in Thirunaangur, 11 Garuda seva Utsav is performed.
-                    Perumal from 11 different places in and around Sirkali gather at the Pandal before Manimadakoil followed by Azhwar’s mangalasasanam. Pancha Narasimha Kshetrams in Seerkazhi, where Lord Narasimhar bless in his five forms.
-
+                  <p><strong><?php echo $row['content']; ?></strong>
                   </p>
+                  <?php
+                  $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                  $sel_query = "select * from garudaseva";
+                  $result = mysqli_query($conn, $sel_query);
+                  $row = mysqli_fetch_array($result);
+                  ?>
 
                   <ul class="list-inline detailsBtn">
 
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Jan 25 - Jan 26, 2020</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> </i> <strong><?php echo $row['month']; ?></strong></span></li>
 
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> </i> <strong><?php echo $row['duration']; ?></strong></span></li>
 
                   </ul>
 
@@ -354,7 +364,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -401,15 +411,21 @@
 
                   </div>
 
-                  <p>There are nine temples of Lord Narasimha in Ahobilam which house the self-manifested Deities of the Lord. Lord Shiva in Srisailam temple is referred to as one of the twelve Jyotirlingas. This temple is classified as one of the Paadal Petra Sthalam. Mahanandi is one of the Nava Nandis.
 
-                  </p>
+                  <p> <strong> There are nine temples of Lord Narasimha in Ahobilam which house the self-manifested Deities of the Lord. Lord Shiva in Srisailam temple is referred to as one of the twelve Jyotirlingas. This temple is classified as one of the Paadal Petra Sthalam. Mahanandi is one of the Nava Nandis.
+                    </strong></p>
 
                   <ul class="list-inline detailsBtn">
+                    <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from Ahobilam";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
 
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Feb 15 - Feb 18, 2020</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
 
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 4 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
 
                   </ul>
 
@@ -423,7 +439,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -453,6 +469,12 @@
                   <div class="countryRating">
 
                     <span>Maharashtra</span>
+                    <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from Shirdi";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
 
                     <ul class="list-inline rating">
 
@@ -470,13 +492,13 @@
 
                   </div>
 
-                  <p>The darshan of Baba in Shirdi gives us all goodness and wellness. Also we have the darshan of Triyambakeshwar in Nashik, Panchavati, Ellora and Grishneswar, Vitobha Panduranga Darshan at Pandaripur and finally Sri Ragavendra Swami Mutt at Manthralayam.</p>
+                  <p> <strong> The darshan of Baba in Shirdi gives us all goodness and wellness. Also we have the darshan of Triyambakeshwar in Nashik, Panchavati, Ellora and Grishneswar, Vitobha Panduranga Darshan at Pandaripur and finally Sri Ragavendra Swami Mutt at Manthralayam. </strong></p>
 
                   <ul class="list-inline detailsBtn">
 
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Jan 29 - Feb 4, 2020</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
 
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 7 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
 
                   </ul>
 
@@ -490,7 +512,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -515,7 +537,12 @@
                   <h4 class="media-heading"><a href="udupi.php">Udupi Trip</a></h4>
 
                   <div class="countryRating">
-
+                  <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from Udupi";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
                     <span>Karnataka</span>
 
                     <ul class="list-inline rating">
@@ -534,13 +561,13 @@
 
                   </div>
 
-                  <p>Here is the holy temple of Sri Krishna which is connected to Dwapara Yuga. This is also the birth place of Sri Madhwacharya founder of Dwaitha. Along with this we have darshan of Murudeeshwar, Kollur Mookambigai, Manjunatha Swami, Sringeri Shardamba, Kukke Subramaniya and many more.</p>
+                  <p><strong><?php echo $row['content']; ?></strong></p>
 
                   <ul class="list-inline detailsBtn">
 
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Mar 7 - Mar 11, 2020</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
 
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 5 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
 
                   </ul>
 
@@ -556,7 +583,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -576,6 +603,12 @@
                 <div class="bodyLeft">
                   <h4 class="media-heading"><a href="bhadrachalam.php">Bhadrachalam Trip</a></h4>
                   <div class="countryRating">
+                  <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from bhadrachalam";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
                     <span>Andhra Pradesh</span>
                     <ul class="list-inline rating">
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -585,10 +618,10 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
                   </div>
-                  <p>Apart from 108 Divyadesams, even more significant places of Lord Vishnu are there. Lord Vishnu has showered his blessings in the form of Rama in Bhadrachalam, Sathyanarayana at Annavaram, Koormanathaswamy at Srikakulam etc. </p>
+                  <p> <strong>Apart from 108 Divyadesams, even more significant places of Lord Vishnu are there. Lord Vishnu has showered his blessings in the form of Rama in Bhadrachalam, Sathyanarayana at Annavaram, Koormanathaswamy at Srikakulam etc. </strong> </p>
                   <ul class="list-inline detailsBtn">
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Mar 12 - Mar 15, 2020</span></li>
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 4 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
                   </ul>
                 </div>
                 <div class="bodyRight">
@@ -596,7 +629,7 @@
 
                     <a href="bhadrachalam.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
@@ -635,13 +668,19 @@
                     </ul>
 
                   </div>
+                  <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from vaishnodevi";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
 
-                  <p>Mathura also known as Krishnajanmaboomi. Pilgrimage to Mata Vaishnodevi is one of the holiest. Ayodhya is also known as Rama Janmaboomi. Naimisaranyam is the place where 18 puranas were told Suthbouranikar. Chakra theertham is an important theertham.</p>
+                  <p> <strong>Mathura also known as Krishnajanmaboomi. Pilgrimage to Mata Vaishnodevi is one of the holiest. Ayodhya is also known as Rama Janmaboomi. Naimisaranyam is the place where 18 puranas were told Suthbouranikar. Chakra theertham is an important theertham.</strong> </p>
 
                   <ul class="list-inline detailsBtn">
 
-                    <!--<li><span class="textInfo"><i class="fa fa-train" aria-hidden="true"></i> Feb 22 - Mar 5, 2019</span></li>-->
-                    <li><span class="textInfo"><i class="fa fa-plane" aria-hidden="true"></i> Apr 20 - Apr 27, 2020</span></li>
+                   
+                    <li><span class="textInfo"><i class="fa fa-plane" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
                   </ul>
 
                 </div>
@@ -654,7 +693,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -681,6 +720,12 @@
                   <h4 class="media-heading"><a href="mukthinath.php">Mukthinath Trip</a></h4>
 
                   <div class="countryRating">
+                  <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from mukthinath";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
 
                     <span>Nepal</span>
 
@@ -700,12 +745,12 @@
 
                   </div>
 
-                  <p>"Mukthinath" word is derived from "Mukti" and "Nath". "Mukti" means "Salvation" and "Nath" means "God or Master". Mukti holds great significance for all spiritual people. Muktinath this Sanskrit name itself has religious overtone and a sort of emotional ring to it for the devout Hindus.</p>
+                  <p> <strong>"Mukthinath" word is derived from "Mukti" and "Nath". "Mukti" means "Salvation" and "Nath" means "God or Master". Mukti holds great significance for all spiritual people. Muktinath this Sanskrit name itself has religious overtone and a sort of emotional ring to it for the devout Hindus.</strong> </p>
 
                   <ul class="list-inline detailsBtn">
 
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Sep 4 - Sep 9, 2019</span></li>
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
                   </ul>
 
                 </div>
@@ -718,7 +763,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -737,6 +782,13 @@
                 <div class="bodyLeft">
                   <h4 class="media-heading"><a href="divyadesam-2.php">Chola Naatu Divyadesam</a></h4>
                   <div class="countryRating">
+                  <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from CholaNaatu";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
+
                     <span>40 Temples</span>
                     <ul class="list-inline rating">
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
@@ -746,10 +798,10 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
                   </div>
-                  <p>These are the 108 Vishnu temples. Of the 108 temples 105 are in India, 1 in Nepal and last two are out of earth (Thiruparkadal and Paramapadam). In India 84 temples in Tamilnadu, 11 in Kerala, 2 in Andhra Pradesh, 1 in Gujarat, 4 in Uttarpradesh and 3 temples in Uttarkhand. </p>
+                  <p><strong><?php echo $row['content']; ?></strong></p>
                   <ul class="list-inline detailsBtn">
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Dec 17 - Dec 22, 2019</span></li>
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
                   </ul>
                 </div>
                 <div class="bodyRight">
@@ -757,7 +809,7 @@
 
                     <a href="divyadesam-2.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
@@ -779,6 +831,12 @@
                   <h4 class="media-heading"><a href="pandyanadu.php">Pandya Naadu Divyadesam</a></h4>
 
                   <div class="countryRating">
+                  <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from PandyaNaadu";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
 
                     <span>Tamilnadu</span>
 
@@ -798,11 +856,11 @@
 
                   </div>
 
-                  <p>The Divya Desams (sacred places) are 108 temples that are regarded by Srivaishnavite Hindus as being of special holiness. There are 18 Divya Desams based on Pandya nadu out of which 9 divyadesams are called Nava Tirupathi temples.</p>
+                  <p> <strong>The Divya Desams (sacred places) are 108 temples that are regarded by Srivaishnavite Hindus as being of special holiness. There are 18 Divya Desams based on Pandya nadu out of which 9 divyadesams are called Nava Tirupathi temples.</strong> </p>
 
                   <ul class="list-inline detailsBtn">
 
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Jul 22 - Jul 25, 2019</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
 
                   </ul>
 
@@ -816,7 +874,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -859,12 +917,18 @@
                     </ul>
 
                   </div>
+                  <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from Malainadu";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
 
-                  <p>The Divya Desams (sacred places) are 108 temples that are regarded by Srivaishnavite Hindus as being of special holiness. These Divya Desams were praised by the 12 Alvars, the ultimate devotees of Lord Vishnu. There are 11 Divya Desams based on Malai nadu the ancient Kerala.</p>
+                  <p> <strong>The Divya Desams (sacred places) are 108 temples that are regarded by Srivaishnavite Hindus as being of special holiness. These Divya Desams were praised by the 12 Alvars, the ultimate devotees of Lord Vishnu. There are 11 Divya Desams based on Malai nadu the ancient Kerala.</strong> </p>
 
                   <ul class="list-inline detailsBtn">
 
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Nov 14 - Nov 19, 2019</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
 
                   </ul>
 
@@ -878,7 +942,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -923,16 +987,22 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
 
                     </ul>
+                    <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from Pandaripuram";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
 
                   </div>
 
-                  <p> Pandaripuram is a major holy place in Maharashtra and it is also called South Kashi in Maharashtra. It is famous for the Lord Vitthal temple situated on the bank of Bhima river. Hampi is an Unesco World Heritage Site and have some great historical significance.</p>
+                  <p><strong><?php echo $row['content']; ?></strong></p>
 
                   <ul class="list-inline detailsBtn">
 
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Apr 22 - Apr 28, 2019</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
 
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
 
                   </ul>
 
@@ -946,7 +1016,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -991,14 +1061,20 @@
                     </ul>
 
                   </div>
+                  <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from ThulaKaveri";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
 
-                  <p> Sixty six crores of sacred waters in all the fourteen worlds, come stay in Kaveri, in the month of Thula by the order of Lord Keshava says Agneya purana. This period is very auspicious for taking bath in the Kaveri. </p>
+                  <p> <strong>Sixty six crores of sacred waters in all the fourteen worlds, come stay in Kaveri, in the month of Thula by the order of Lord Keshava says Agneya purana. This period is very auspicious for taking bath in the Kaveri. </strong> </p>
 
                   <ul class="list-inline detailsBtn">
 
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Nov 9 - Nov 11, 2018</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i>  <strong><?php echo $row['month']; ?></strong></span></li>
 
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i>  <strong><?php echo $row['duration']; ?></strong></span></li>
 
                   </ul>
 
@@ -1012,7 +1088,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -1060,14 +1136,20 @@
                     </ul>
 
                   </div>
+                  <?php
+                    $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                    $sel_query = "select * from NavaTirupati";
+                    $result = mysqli_query($conn, $sel_query);
+                    $row = mysqli_fetch_array($result);
+                    ?>
 
-                  <p> This trip covers Nava Tirupati and Nava Kailayam temples. Also covers Kutrallam falls, Kutralanathar temple, Nellaiyappar temple and Thenkasi Viswanathar temple.</p>
+                  <p> <strong>This trip covers Nava Tirupati and Nava Kailayam temples. Also covers Kutrallam falls, Kutralanathar temple, Nellaiyappar temple and Thenkasi Viswanathar temple.</strong> </p>
 
                   <ul class="list-inline detailsBtn">
 
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Jul 24 - Jul 26, 2018</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
 
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 3 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
 
                   </ul>
 
@@ -1081,7 +1163,7 @@
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -1226,7 +1308,7 @@
               <ul class="list-inline">
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="packages.php">Tour Packages</a></li>
-                <li><a href="contact.html">Enquiry</a></li>
+                <li><a href="contact.php">Enquiry</a></li>
               </ul>
             </div>
             <div class="col-sm-6 col-sm-pull-6 col-xs-12">

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <!-- SITE TITTLE -->
@@ -19,14 +20,14 @@
 
   <!-- GOOGLE FONT -->
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-   <link href="https://fonts.googleapis.com/css?family=Arvo:700i" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css?family=Arvo:700i" rel="stylesheet">
+
   <!-- CUSTOM CSS -->
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/colors/default.css" id="option_color">
 
   <!-- FAVICON -->
-  <link rel="shortcut icon" type="image/png" href="img/home/logo-color-sm.png"/>
+  <link rel="shortcut icon" type="image/png" href="img/home/logo-color-sm.png" />
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -41,7 +42,7 @@
   <div class="main-wrapper">
 
     <!-- HEADER -->
-     <!-- HEADER -->
+    <!-- HEADER -->
     <header>
       <nav class="navbar navbar-default navbar-main navbar-fixed-top lightHeader" role="navigation">
         <div class="container">
@@ -56,21 +57,21 @@
             </button>
             <a class="navbar-brand" href="index.html"></a>
           </div>
-      
+
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav navbar-right">
-               <li class="dropdown singleDrop">
+              <li class="dropdown singleDrop">
                 <a href="index.html">Home</a>
               </li>
-               
-               <li class="dropdown singleDrop">
+
+              <li class="dropdown singleDrop">
                 <a href="aboutus.html">About Us</a>
-              </li> 
+              </li>
 
               <li class="active dropdown singleDrop">
                 <a href="packages.php">Tour Packages</a>
-              </li> 
+              </li>
 
               <li class="dropdown singleDrop">
                 <a href="gallery.html">Gallery</a>
@@ -78,13 +79,13 @@
 
               <li class="dropdown singleDrop">
                 <a href="booking.html">Book Now</a>
-              </li>                         
+              </li>
 
               <li class="dropdown singleDrop">
-                <a href="contact.html">Contact Us</a>
-              </li> 
+                <a href="contact.php">Contact Us</a>
+              </li>
               <li class="dropdown searchBox">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
                 <ul class="dropdown-menu dropdown-menu-right">
                   <li>
                     <span class="input-group">
@@ -95,11 +96,11 @@
                 </ul>
               </li>
             </ul>
-          </div>          
+          </div>
         </div>
       </nav>
-    </header>   
- 
+    </header>
+
 
     <!-- PAGE TITLE -->
     <section class="pageTitle" style="background-image:url(img/home/pages/page-title-bg6.jpg);">
@@ -123,8 +124,8 @@
     <section class="mainContentSection packagesSection">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12"> 
-             
+          <div class="col-xs-12">
+
             <div class="media packagesList">
               <a class="media-left fancybox-pop" href="img/home/packages/packages-4.jpg">
                 <img class="media-object" src="img/home/packages/packages-4.jpg" alt="Image">
@@ -142,24 +143,30 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
                   </div>
-                  <p>These are the 108 Vishnu temples. Of the 108 temples 105 are in India, 1 in Nepal and last two are out of earth (Thiruparkadal and Paramapadam). In India 84 temples in Tamilnadu, 11 in Kerala, 2 in Andhra Pradesh, 1 in Gujarat,  4 in Uttarpradesh and 3 temples in Uttarkhand. </p>
-                  <ul class="list-inline detailsBtn">  
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Dec 6 - Dec 9, 2019</span></li>                 
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 4 days</span></li>
+                  <?php
+                  $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                  $sel_query = "select * from ThondaiNattu";
+                  $result = mysqli_query($conn, $sel_query);
+                  $row = mysqli_fetch_array($result);
+                  ?>
+                  <p> <strong><?php echo $row['content']; ?></strong> </p>
+                  <ul class="list-inline detailsBtn">
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
                   </ul>
                 </div>
                 <div class="bodyRight">
-                  <div class="bookingDetails">               
-                   
+                  <div class="bookingDetails">
+
                     <a href="divyadesam.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                   <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
             </div>
 
-  
+
             <div class="media packagesList">
               <a class="media-left fancybox-pop" href="img/home/packages/packages-9.jpg">
                 <img class="media-object" src="img/home/packages/packages-9.jpg" alt="Image">
@@ -177,22 +184,28 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
                   </div>
-                  <p>Important Sani Bhagavan temples are being covered in this tour.  The destinations covered are Thiruvarur temple,  Thirukollikadu, Thirunallaru, Thirunaraiyur and other nearby temples.</p>
+                  <?php
+                  $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                  $sel_query = "select * from Thirunallaru";
+                  $result = mysqli_query($conn, $sel_query);
+                  $row = mysqli_fetch_array($result);
+                  ?>
+                  <p> <strong><?php echo $row['content']; ?></strong></p>
                   <ul class="list-inline detailsBtn">
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Mar 29 - Apr 1, 2018</span></li>
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i>  <strong><?php echo $row['duration']; ?></strong></span></li>
                   </ul>
                 </div>
                 <div class="bodyRight">
-                  <div class="bookingDetails">                 
+                  <div class="bookingDetails">
                     <a href="thirunallaru.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
-            </div>   
-             <div class="media packagesList">
+            </div>
+            <div class="media packagesList">
 
               <a class="media-left fancybox-pop" href="img/home/packages/packages-11.jpg">
 
@@ -225,14 +238,20 @@
                     </ul>
 
                   </div>
+                  <?php
+                  $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                  $sel_query = "select * from Pushkaram";
+                  $result = mysqli_query($conn, $sel_query);
+                  $row = mysqli_fetch_array($result);
+                  ?>
 
-                  <p> Thamirabarani is celeberating Mahapushkaram this year. This happens once in 144 years.  From Papanasam to Punnakkayal special poojas will be performed. On this great occasion, our Sundaramani Travels has arranged a trip to Tirunelveli to participate in the Pushkaram.</p>
+                  <p> <strong><?php echo $row['content']; ?></strong></p>
 
                   <ul class="list-inline detailsBtn">
 
-                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> Oct 20 - Oct 21, 2018</span></li>
+                    <li><span class="textInfo"><i class="fa fa-calendar" aria-hidden="true"></i> <strong><?php echo $row['month']; ?></strong></span></li>
 
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 2 days</span></li>
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
 
                   </ul>
 
@@ -240,13 +259,13 @@
 
                 <div class="bodyRight">
 
-                  <div class="bookingDetails">                 
+                  <div class="bookingDetails">
 
                     <a href="pushkaram.php" class="btn buttonTransparent clearfix">Details</a>
 
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
 
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
                   </div>
 
@@ -256,7 +275,7 @@
 
             </div>
 
-           
+
             <div class="media packagesList">
               <a class="media-left fancybox-pop" href="img/home/packages/packages-5.jpg">
                 <img class="media-object" src="img/home/packages/packages-5.jpg" alt="Image">
@@ -274,17 +293,23 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
                   </div>
-                  <p>Five Shiva temples representing the manifestation of the five prime elements of nature: Land - Water - Air - Sky - Fire.</p>
-                  <ul class="list-inline detailsBtn">                    
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 days</span></li>
+                  <?php
+                  $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                  $sel_query = "select * from Panchaboothasthalam";
+                  $result = mysqli_query($conn, $sel_query);
+                  $row = mysqli_fetch_array($result);
+                  ?>
+                  <p><strong><?php echo $row['content']; ?></strong></p>
+                  <ul class="list-inline detailsBtn">
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
                   </ul>
                 </div>
                 <div class="bodyRight">
-                  <div class="bookingDetails">             
-                   
+                  <div class="bookingDetails">
+
                     <a href="panchabootham.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
@@ -306,43 +331,49 @@
                       <li><i class="fa fa-star" aria-hidden="true"></i></li>
                     </ul>
                   </div>
-                  <p>The abode of Lord Muruga representing the six chakras of human body Muladhana Svadishtana Manipuraga Anagadha Visuddhi Aigna Sahasra.</p>
-                  <ul class="list-inline detailsBtn">                  
-                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> 6 days</span></li>
+                  <?php
+                  $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                  $sel_query = "select * from ArupadaiVeedu";
+                  $result = mysqli_query($conn, $sel_query);
+                  $row = mysqli_fetch_array($result);
+                  ?>
+                  <p><strong><?php echo $row['content']; ?></strong></p>
+                  <ul class="list-inline detailsBtn">
+                    <li><span class="textInfo"><i class="fa fa-clock-o" aria-hidden="true"></i> <strong><?php echo $row['duration']; ?></strong></span></li>
                   </ul>
                 </div>
                 <div class="bodyRight">
-                  <div class="bookingDetails">               
-                   
+                  <div class="bookingDetails">
+
                     <a href="arupadaiveedu.php" class="btn buttonTransparent clearfix">Details</a>
                     <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
-                    <a href="contact.html" class="btn buttonTransparent">Inquiry</a>
+                    <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
               </div>
             </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="paginationCenter">
-              <ul class="pagination">
-                <li>
-                  <a href="packages.php" aria-label="Previous">
-                    <span aria-hidden="true"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Previous</span>
-                  </a>
-                </li>
-                <li><a href="packages.php">1</a></li>
-                <li class="active"><a href="#">2</a></li>
-                             
-                <li>
-                  <a href="#" aria-label="Next">
-                    <span aria-hidden="true">Next<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
-                  </a>
-                </li>
-              </ul>
+            <div class="row">
+              <div class="col-xs-12">
+                <div class="paginationCenter">
+                  <ul class="pagination">
+                    <li>
+                      <a href="packages.php" aria-label="Previous">
+                        <span aria-hidden="true"><i class="fa fa-long-arrow-left" aria-hidden="true"></i>Previous</span>
+                      </a>
+                    </li>
+                    <li><a href="packages.php">1</a></li>
+                    <li class="active"><a href="#">2</a></li>
+
+                    <li>
+                      <a href="#" aria-label="Next">
+                        <span aria-hidden="true">Next<i class="fa fa-long-arrow-right" aria-hidden="true"></i></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
     </section>
 
     <!-- FOOTER INNER -->
@@ -354,17 +385,17 @@
             <div class="col-sm-3 col-xs-12">
               <div class="footerContent">
                 <a href="index.html" class="footer-logo"><img src="img/home/logo-color-sm.png" alt="footer-logo"><span class="footer-logo-title">Sundaramani Travels</span></a>
-           <p>A pilgrimage is a journey in search of moral and spiritual significance.
-           India is covered by many holy sites and with sacred rivers.  Going on a pilgrimage is considered as a good Karma. Our motto is to take people to these holy places across India in a most convenient way and with utmost care.</p>
+                <p>A pilgrimage is a journey in search of moral and spiritual significance.
+                  India is covered by many holy sites and with sacred rivers. Going on a pilgrimage is considered as a good Karma. Our motto is to take people to these holy places across India in a most convenient way and with utmost care.</p>
               </div>
-                     </div>
+            </div>
             <div class="col-sm-3 col-xs-12">
               <div class="footerContent">
                 <h5>contact us</h5>
                 <p>For support or any questions, please get in touch with us!</p>
                 <ul class="list-unstyled">
                   <li><i class="fa fa-home" aria-hidden="true"></i>Invicon Silver Springs <br>
-                   Krishna Nagar 6th street <br>Tambaram West, Chennai 600 0045</li>
+                    Krishna Nagar 6th street <br>Tambaram West, Chennai 600 0045</li>
                   <li><i class="fa fa-phone" aria-hidden="true"></i>+91 8667475644, +91 9940056963</li>
                   </i></li>
                   <li><i class="fa fa-envelope-o" aria-hidden="true"></i><a href="mailTo:sundaramanitravels@gmail.com">sundaramanitravels@gmail.com</a></li>
@@ -376,26 +407,26 @@
                 <h5>Gallery</h5>
                 <div class="row">
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-1.jpg"><img src="img/home/packages/packages-1.jpg " width="83" height= "73" alt="image"></a>
+                    <a class="fancybox-pop" href="img/home/packages/packages-1.jpg"><img src="img/home/packages/packages-1.jpg " width="83" height="73" alt="image"></a>
                   </div>
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-2.jpg"><img src="img/home/packages/packages-2.jpg" width="83" height= "73" alt="image"></a>
+                    <a class="fancybox-pop" href="img/home/packages/packages-2.jpg"><img src="img/home/packages/packages-2.jpg" width="83" height="73" alt="image"></a>
                   </div>
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-3.jpg"><img src="img/home/packages/packages-3.jpg" width="83" height= "73" alt="image"></a>
+                    <a class="fancybox-pop" href="img/home/packages/packages-3.jpg"><img src="img/home/packages/packages-3.jpg" width="83" height="73" alt="image"></a>
                   </div>
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-4.jpg"><img src="img/home/packages/packages-4.jpg" width="83" height= "73" alt="image"></a>
+                    <a class="fancybox-pop" href="img/home/packages/packages-4.jpg"><img src="img/home/packages/packages-4.jpg" width="83" height="73" alt="image"></a>
                   </div>
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-5.jpg"><img src="img/home/packages/packages-5.jpg" width="83" height= "73"alt="image"></a>
+                    <a class="fancybox-pop" href="img/home/packages/packages-5.jpg"><img src="img/home/packages/packages-5.jpg" width="83" height="73" alt="image"></a>
                   </div>
                   <div class="col-xs-4">
-                    <a class="fancybox-pop" href="img/home/packages/packages-6.jpg"><img src="img/home/packages/packages-6.jpg" width="83" height= "73" alt="image"></a>
-                  </div>           
-             
+                    <a class="fancybox-pop" href="img/home/packages/packages-6.jpg"><img src="img/home/packages/packages-6.jpg" width="83" height="73" alt="image"></a>
+                  </div>
+
+                </div>
               </div>
-            </div>
             </div>
             <div class="col-sm-3 col-xs-12">
               <div class="footerContent">
@@ -424,19 +455,19 @@
               <ul class="list-inline">
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="packages.php">Tour Packages</a></li>
-                <li><a href="contact.html">Enquiry</a></li>                
+                <li><a href="contact.php">Enquiry</a></li>
               </ul>
             </div>
             <div class="col-sm-6 col-sm-pull-6 col-xs-12">
               <div class="copyRightText">
-                <p>Copyright © 2017 Sundaramani Travels. Designed by <a target="_blank" href="http://www.h2kcoderz.in/">H2KCoderz</a>.</p>
+              <p>Copyright © 2022-2023 Sundaramani Travels. Designed by <a target="_blank" href="https://webbird.co.in/">webbird</a>.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </footer>
-   </div>
+  </div>
 
 
   <!-- JAVASCRIPTS -->
@@ -453,6 +484,7 @@
   <script src="plugins/isotope/jquery.fancybox.pack.js"></script>
   <script src="plugins/isotope/isotope-triger.js"></script>
   <script src="plugins/countdown/jquery.syotimer.js"></script>
-  <script src="js/custom.js"></script> 
+  <script src="js/custom.js"></script>
 </body>
+
 </html>

@@ -82,7 +82,7 @@
               </li>
 
               <li class="dropdown singleDrop">
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.php">Contact Us</a>
               </li>
               <li class="dropdown searchBox">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
@@ -593,7 +593,7 @@
               <ul class="list-inline">
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="packages.php">Tour Packages</a></li>
-                <li><a href="contact.html">Enquiry</a></li>
+                <li><a href="contact.php">Enquiry</a></li>
               </ul>
             </div>
             <div class="col-sm-6 col-sm-pull-6 col-xs-12">

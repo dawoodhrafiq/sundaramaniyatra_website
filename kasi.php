@@ -82,7 +82,7 @@
               </li>
 
               <li class="dropdown singleDrop">
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.php">Contact Us</a>
               </li>
               <li class="dropdown searchBox">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
@@ -350,8 +350,8 @@
                               <h3><strong>kasi trip</strong></h3>
                               <ul class="list-unstyled">
 
-                                <li><span>MONTH: </span>  <strong><?php echo $row['month']; ?></strong></li>
-                                <li></i><span>MODE OF TRAVEL: </span>  <strong><?php echo $row['modeoftravel']; ?></strong></li>
+                                <li><span>MONTH: </span> <strong><?php echo $row['month']; ?></strong></li>
+                                <li></i><span>MODE OF TRAVEL: </span> <strong><?php echo $row['modeoftravel']; ?></strong></li>
                                 <li><span>DURATION:</span> <strong><?php echo $row['duratin']; ?></strong></li>
                                 <br>
                                 <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <?php echo $row['price']; ?>* </span> Per Person</li>
@@ -608,7 +608,7 @@
               <ul class="list-inline">
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="packages.php">Tour Packages</a></li>
-                <li><a href="contact.html">Enquiry</a></li>
+                <li><a href="contact.php">Enquiry</a></li>
               </ul>
             </div>
             <div class="col-sm-6 col-sm-pull-6 col-xs-12">

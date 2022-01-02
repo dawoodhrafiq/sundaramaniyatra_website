@@ -37,7 +37,11 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 
-              <div><a style="text-decoration:none; color:#fff; padding-left:15px;   " href="admin-page.php"><i style="font-size:20px;" class="fas fa-users-cog"></i></a> <a style="text-decoration:none; color:#fff; padding-left:15px;   " href="logout.php"><i style="font-size:20px;" class="fas fa-sign-out-alt"></i></a></div>
+              <div>
+                   <a style="text-decoration:none; color:#fff; padding-left:15px;" href="logout.php"><i style="font-size:20px;" class="fas fa-mail-bulk"></i></a>
+                   <a style="text-decoration:none; color:#fff; padding-left:15px;   " href="admin-page.php"><i style="font-size:20px;" class="fas fa-users-cog"></i></a> 
+                   <a style="text-decoration:none; color:#fff; padding-left:15px;" href="logout.php"><i style="font-size:20px;" class="fas fa-sign-out-alt"></i></a>
+              </div>
             </div>
           </div>
         </nav>

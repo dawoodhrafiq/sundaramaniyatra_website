@@ -82,7 +82,7 @@
               </li>
 
               <li class="dropdown singleDrop">
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.php">Contact Us</a>
               </li>
               <li class="dropdown searchBox">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
@@ -149,7 +149,7 @@
           <div class="col-xs-12">
 
             <div class="generalInfo">
-            <?php
+              <?php
               $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
               $sel_query = "select * from pandyanaadu";
               $result = mysqli_query($conn, $sel_query);
@@ -159,7 +159,7 @@
               <h2>General Information</h2>
 
               <p>
-              <?php echo $row['content']; ?> <br><br>
+                <?php echo $row['content']; ?> <br><br>
                 In Pandiya Naadu, there are 18 Divyadesams. In all these Divyadesams, the Perumal is found facing his thirumugham towards east direction. <br><br>
                 In this 18 Divyadesams, 9 Divyadesams namely Thirukkurugoor, Thirukkoloor, Thirupperai, Thiruvaikundam, Thiruvaragunamangai, Thirukkulandai, Thiruppulingudi, Thirutholaivillimangalam and Thiruccheerivaramangai are collectively called as "Nava Tirupathi". <br><br>
 
@@ -968,7 +968,7 @@
               <ul class="list-inline">
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="packages.php">Tour Packages</a></li>
-                <li><a href="contact.html">Enquiry</a></li>
+                <li><a href="contact.php">Enquiry</a></li>
               </ul>
             </div>
             <div class="col-sm-6 col-sm-pull-6 col-xs-12">
