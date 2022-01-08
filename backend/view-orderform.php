@@ -1,7 +1,7 @@
 <?php
-session_start();
-if (!isset($_SESSION['admin_id']) || $_SESSION['admin_id'] == '') {
-    header('Location:../login.php?login=fail');
+ session_start();
+ if(!isset($_SESSION['admin_id']) || $_SESSION['admin_id']==''){
+  header('Location:../login.php?login=fail');
 }
 ?>
 <!DOCTYPE html>
@@ -151,115 +151,46 @@ if (!isset($_SESSION['admin_id']) || $_SESSION['admin_id'] == '') {
                     </div>
                 </div>
                 <div class="col-10">
-                    <div class="right-clm">
+                    <div class="right-clm ">
+
                         <br>
-                        <h3>enquiry messages.</h3>
+                        <h1>Full details of orderr form.</h1>
 
-
-                        <table class="table table-striped table-hover">
+                        <div class="card">
                             <?php
                             $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
-                            $sel_query = "select * from enquiry";
+                            $sel_query = "select * from orderform where id=" . $_GET['id'];
                             $result = mysqli_query($conn, $sel_query);
-                            $msg = "";
-                            if (isset($_GET['del']) && $_GET['del'] == 'succ') {
-                                $msg = "The Message Has Been Deleted Successfully.";
-                            }
-                            if (isset($_GET['update']) && $_GET['update'] == 'succ') {
-                                $msg = "Your Record Has Been updated Successfully.";
-                            }
-                            if (isset($_GET['kasdel']) && $_GET['kasdel'] == 'succ') {
-                                $msg = "order list deleted  Successfully.";
-                            }
-
+                            $row = mysqli_fetch_array($result);
                             ?>
-                            <div class="text-center">
-                                <h5 style="color:red;" class="display-10"> <?php echo $msg; ?></h5>
+
+                            <div class="card-header">
+                                <span > i Need A  " <span style="color:#BA4A00;"><?php echo $row['trip']; ?> </span> " trip  </span> 
                             </div>
-
-                            <thead>
-                                <tr>
-                                    <th>NAME</th>
-                                    <th>MAIL ID</th>
-                                    <th>PHONE NUMBER</th>
-                                    <th>MESSAGE</th>
-                                    <th>ACTIONS</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                while ($row = mysqli_fetch_array($result)) {
-                                ?>
-                                    <tr>
-                                        <td><?php echo $row['name']; ?></th>
-                                        <td><?php echo $row['mailid']; ?></td>
-                                        <td><?php echo $row['phonenumber']; ?></td>
-                                        <td><?php echo $row['message']; ?></td>
-                                        <td>
-                                            <a href="view-message.php?id=<?php echo $row['id']; ?>"><i class="fas fa-eye"></i></a>
-                                            <a href="delete-orderform.php?id=<?php echo $row['id']; ?>" onclick="checkdelete(<?php echo $row['id']; ?>);"><i class="fas fa-trash-alt"></i></a>
-                                        </td>
-                                    </tr>
-                                <?php } ?>
-
-                            </tbody>
-                        </table>
-                        <br>
-                        <div style="margin-top:115px;">
-                            <h3>order from detail.</h3>
+                            <div class="card-body">
+                                <blockquote class="blockquote mb-0">
+                                 <span class="d-flex"> <strong>NAME-1 :</strong>  <p><?php echo $row['name1']; ?></p> - - <p><?php echo $row['gender1']; ?></p> - - <p><?php echo $row['age1']; ?></p> - - <p><?php echo $row['idtype1']; ?></p> - - <p><?php echo $row['idnumber1']; ?></p></span>
+                                 <span class="d-flex"> <strong>NAME-2 :</strong>  <p><?php echo $row['name2']; ?></p> - - <p><?php echo $row['gender2']; ?></p> - - <p><?php echo $row['age2']; ?></p> - - <p><?php echo $row['idtype2']; ?></p> - - <p><?php echo $row['idnumber2']; ?></p></span>
+                                 <span class="d-flex"> <strong>NAME-3 :</strong>  <p><?php echo $row['name3']; ?></p> - - <p><?php echo $row['gender3']; ?></p> - - <p><?php echo $row['age3']; ?></p> - - <p><?php echo $row['idtype3']; ?></p> - - <p><?php echo $row['idnumber3']; ?></p></span>
+                                 <span class="d-flex"> <strong>NAME-4 :</strong>  <p><?php echo $row['name4']; ?></p> - - <p><?php echo $row['gender4']; ?></p> - - <p><?php echo $row['age4']; ?></p> - - <p><?php echo $row['idtype4']; ?></p> - - <p><?php echo $row['idnumber4']; ?></p></span>
+                                 <span class="d-flex"> <strong>NAME-5 :</strong>  <p><?php echo $row['name5']; ?></p> - - <p><?php echo $row['gender5']; ?></p> - - <p><?php echo $row['age5']; ?></p> - - <p><?php echo $row['idtype5']; ?></p> - - <p><?php echo $row['idnumber5']; ?></p></span>
+                                 <span class="d-flex"> <strong>NAME-6 :</strong>  <p><?php echo $row['name6']; ?></p> - - <p><?php echo $row['gender6']; ?></p> - - <p><?php echo $row['age6']; ?></p> - - <p><?php echo $row['idtype6']; ?></p> - - <p><?php echo $row['idnumber6']; ?></p></span>
+                                 <span class="d-flex"> <strong>phone number :</strong>  <p><?php echo $row['phonenumber']; ?></p></span>
+                                 <span class="d-flex"> <strong>email:</strong>  <p><?php echo $row['email']; ?></p></span>
+                                 <span class="d-flex"> <strong>address :</strong>  <p><?php echo $row['address']; ?></p></span>
+                                 <span class="d-flex"> <strong>city :</strong>  <p><?php echo $row['city']; ?></p></span>
+                                 <span class="d-flex"> <strong>pincode :</strong>  <p><?php echo $row['pincode']; ?></p></span>
+                                 <span class="d-flex"> <strong>state :</strong>  <p><?php echo $row['state']; ?></p></span>
+                                 <span class="d-flex"> <strong>requirements :</strong>  <p><?php echo $row['req']; ?></p></span>
+                                    <footer class="blockquote-footer"><?php echo $row['name1']; ?> <cite title="Source Title"> <span class="d-flex" style="font-size:15px;"><?php echo $row['phonenumber']; ?></span> </cite></footer>
+                                </blockquote>
+                            </div>
                         </div>
-                        <table class="table table-dark table-striped">
-                            <?php
-                            $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
-                            $sel_query = "select * from orderform";
-                            $result = mysqli_query($conn, $sel_query);
-                            $msg = "";
-                            if (isset($_GET['del']) && $_GET['del'] == 'succ') {
-                                $msg = "The Message Has Been Deleted Successfully.";
-                            }
-                            if (isset($_GET['update']) && $_GET['update'] == 'succ') {
-                                $msg = "Your Record Has Been updated Successfully.";
-                            }
-                            if (isset($_GET['adding']) && $_GET['adding'] == 'succ') {
-                                $msg = "Your Record Has Been created Successfully.";
-                            }
-
-                            ?>
-                           
-                            <thead>
-                                <tr style="color:#D0D3D4;">
-                                    <th>NAME</th>
-                                    <th>trip</th>
-                                    <th>PHONE NUMBER</th>
-                                    <th>MAIL ID</th>
-                                    <th>CITY</th>
-                                    <th>STATE</th>
-                                    <th>ACTIONS</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                while ($row = mysqli_fetch_array($result)) {
-                                ?>
-                                    <tr>
-                                        <td><?php echo $row['name1']; ?></th>
-                                        <td><?php echo $row['trip']; ?></td>
-                                        <td><?php echo $row['phonenumber']; ?></td>
-                                        <td><?php echo $row['email']; ?></td>
-                                        <td><?php echo $row['city']; ?></td>
-                                        <td><?php echo $row['state']; ?></td>
-                                        <td >
-                                            <a href="view-orderform.php?id=<?php echo $row['id']; ?>"><i style="color:#fff;" class="fas fa-eye"></i></a>
-                                            <a href="delete-orderform.php?id=<?php echo $row['id']; ?>" onclick="checkdelete(<?php echo $row['id']; ?>);"><i style="color:#fff;" class="fas fa-trash-alt"></i></a>
-                                        </td>
-                                    </tr>
-                                <?php } ?>
-
-                            </tbody>
-                        </table>
-
-
-
+                                <br>
+                        <div class="btn-add ">
+                            <a class="btn btn-danger" href="delete-orderform.php ?id=<?php echo $row['id']; ?>" onclick="checkdelete(<?php echo $row['id']; ?>);"><i class="fas fa-trash-alt"></i> delete message</a>
+                            <a class="btn btn-dark" href="enquiry.php "> close</a>
+                        </div>
                     </div>
 
                     <script>

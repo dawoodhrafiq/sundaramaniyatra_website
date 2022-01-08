@@ -1,3 +1,10 @@
+<?php
+ session_start();
+ if(!isset($_SESSION['admin_id']) || $_SESSION['admin_id']==''){
+  header('Location:../login.php?login=fail');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -147,28 +154,8 @@
                 <div class="col-10">
                     <div class="right-clm">
                         <br>
-                        <h1>user details</h1>.</h1>
-                        <?php
-                        $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
-                        $sel_query = "select * from admin";
-                        $result = mysqli_query($conn, $sel_query);
-                        $msg = "";
-                        if (isset($_GET['del']) && $_GET['del'] == 'succ') {
-                            $msg = "Your Record Has Been Deleted Successfully.";
-                        }
-                        if (isset($_GET['update']) && $_GET['update'] == 'succ') {
-                            $msg = "Your Record Has Been updated Successfully.";
-                        }
-                        if (isset($_GET['add']) && $_GET['add'] == 'succ') {
-                            $msg = "Your Record Has Been added Successfully.";
-                        }
-                        if (isset($_GET['cc']) && $_GET['cc'] == 'succ') {
-                            $msg = "Student Certificate created successfully.";
-                        }
-                        if (isset($_GET['updatecc']) && $_GET['updatecc'] == 'succ') {
-                            $msg = "Certificate updated successfully.";
-                        }
-                        ?>
+                        <h1>user details.</h1>
+
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             CREATE USER
@@ -191,7 +178,7 @@
                                             $password = $_POST['password'];
                                             header("Location:admin-page.php?add=succ");
                                             $connection = mysqli_connect('localhost', 'root', '', 'sundaramani-travels');
-                                            $query = "INSERT INTO admin (fullname,gender,mailid,phonenumber,city,username,password) VALUES('$fyllname',' $gender','$mailid','$phonenumber','$city','$username','$password')";
+                                            $query = "INSERT INTO admin (fullname,gender,mailid,phonenumber,city,username,password) VALUES('$fullname',' $gender','$mailid','$phonenumber','$city','$username','$password')";
                                             mysqli_query($connection, $query);
                                         }
                                         ?>
@@ -201,7 +188,7 @@
                                             <input name="from_post_flag" type="hidden" value="1">
                                             <div class="mb-3">
                                                 <label for="fullname" class="form-label">Full Name</label>
-                                                <input type="email" placeholder="full name" class="form-control" name="fullname" id="fullname" required>
+                                                <input type="text" placeholder="full name" class="form-control" name="fullname" id="fullname" required>
 
                                             </div>
                                             <div class="mb-3">
@@ -219,15 +206,15 @@
                                             </div>
                                             <div class="mb-3">
                                                 <label for="phonenumber" class="form-label">phone number</label>
-                                                <input type="email" placeholder="please enter your mobile number with +91 " class="form-control" name="phonenumber" id="phonenumber" required>
+                                                <input type="number" placeholder="please enter your mobile number with +91 " class="form-control" name="phonenumber" id="phonenumber" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="city" class="form-label">Enter your city name</label>
-                                                <input type="email" placeholder="enter your city name" class="form-control" name="city" id="city" required>
+                                                <input type="text" placeholder="enter your city name" class="form-control" name="city" id="city" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="username" class="form-label">user name </label>
-                                                <input type="email" placeholder="user name" class="form-control" namae="username" id="username" required>
+                                                <input type="text" placeholder="user name" class="form-control" name="username" id="username" required>
                                                 <div id="emailHelp" class="form-text">this is your login id </div>
                                             </div>
                                             <div class="mb-3">
@@ -243,73 +230,81 @@
                             </div>
                         </div>
 
-                        <div style="margin-top:20px;">
-                            <table class="table table-dark table-hover">
-                                <?php
-                                $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
-                                $sel_query = "select * from admin";
-                                $result = mysqli_query($conn, $sel_query);
-                                $msg = "";
-                                if (isset($_GET['del']) && $_GET['del'] == 'succ') {
-                                    $msg = "Your Record Has Been Deleted Successfully.";
-                                }
-                                if (isset($_GET['delcc']) && $_GET['delcc'] == 'succ') {
-                                    $msg = "certificate Deleted Successfully.";
-                                }
-                                if (isset($_GET['update']) && $_GET['update'] == 'succ') {
-                                    $msg = "Your Record Has Been updated Successfully.";
-                                }
-                                if (isset($_GET['add']) && $_GET['add'] == 'succ') {
-                                    $msg = "Your Record Has Been added Successfully.";
-                                }
-                                if (isset($_GET['cc']) && $_GET['cc'] == 'succ') {
-                                    $msg = "Student Certificate created successfully.";
-                                }
-                                if (isset($_GET['updatecc']) && $_GET['updatecc'] == 'succ') {
-                                    $msg = "Certificate updated successfully.";
-                                }
-                                ?>
-                                <thead>
-                                    <tr>
-                                        <th>full name</th>
-                                        <th>gender</th>
-                                        <th>mail id</th>
-                                        <th>phone number</th>
-                                        <th>city</th>
-                                        <th>user name</th>
-                                        <th>password</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><?php echo$row['fullname'];?></td>
-                                        <td><?php echo$row['gender'];?></td>
-                                        <td><?php echo$row['mailid'];?></td>
-                                        <td><?php echo$row['phonenumber'];?></td>
-                                        <td><?php echo$row['city'];?></td>
-                                        <td><?php echo$row['username'];?></td>
-                                        <td><?php echo$row['password'];?></td>
-                                        <td><a href="certificate.php ?id=<?php echo$row['id'];?>"><i class="fas fa-file-alt"></i></a> 
-                                            <a href="delete-admin.php ?id=<?php echo$row['id'];?>" onclick="checkdelete(<?php echo $row['id'];?>);"><i class="fas fa-trash-alt"></i></a></td> 
-                                        
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        </div>
-                        </div>
 
 
-                        <script>
-                            function checkdelete(studid) {
-                                if (confirm('Are you sure you want to delete')) {
-                                    window.location.href = "admin-page.php?id=" + studid;
-                                    return true;
-                                } else
-                                    return false;
+
+
+
+                        <table class="table table-striped table-hover">
+                            <?php
+                            $conn = mysqli_connect("localhost", "root", "", "sundaramani-travels");
+                            $sel_query = "select * from admin";
+                            $result = mysqli_query($conn, $sel_query);
+                            $msg = "";
+                            if (isset($_GET['del']) && $_GET['del'] == 'succ') {
+                                $msg = "The user data Has Been Deleted Successfully.";
                             }
-                        </script>
-                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+                            if (isset($_GET['update']) && $_GET['update'] == 'succ') {
+                                $msg = "Your Record Has Been updated Successfully.";
+                            }
+                            if (isset($_GET['adding']) && $_GET['adding'] == 'succ') {
+                                $msg = "Your Record Has Been created Successfully.";
+                            }
+
+                            ?>
+                            <div class="text-center">
+                                <h5 style="color:red;" class="display-10"> <?php echo $msg; ?></h5>
+                            </div>
+
+                            <thead>
+                                <tr>
+                                    <th>NAME</th>
+                                    <th>GENDER</th>
+                                    <th>MAIL ID</th>
+                                    <th>PHONE NUMBER</th>
+                                    <th>CITY</th>
+                                    <th>USER NAME</th>
+                                    <th>PASSWORD</th>
+                                    <th>ACTIONS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                while ($row = mysqli_fetch_array($result)) {
+                                ?>
+                                    <tr>
+                                        <td><?php echo $row['fullname']; ?></th>
+                                        <td><?php echo $row['gender']; ?></th>
+                                        <td><?php echo $row['mailid']; ?></td>
+                                        <td><?php echo $row['phonenumber']; ?></td>
+                                        <td><?php echo $row['city']; ?></td>
+                                        <td><?php echo $row['username']; ?></td>
+                                        <td><?php echo $row['password']; ?></td>
+                                        <td>
+                                            <a href="view-message.php?id=<?php echo $row['id']; ?>"><i class="fas fa-eye"></i></a>
+                                            <a href="delete-admin.php?id=<?php echo $row['id']; ?>" onclick="checkdelete(<?php echo $row['id']; ?>);"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
+
+                            </tbody>
+                        </table>
+
+
+
+
+                    </div>
+
+                    <script>
+                        function checkdelete(studid) {
+                            if (confirm('Are you sure you want to delete')) {
+                                window.location.href = "enquiry.php?id=" + studid;
+                                return true;
+                            } else
+                                return false;
+                        }
+                    </script>
+                    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </body>
 

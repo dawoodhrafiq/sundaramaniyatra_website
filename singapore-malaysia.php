@@ -80,23 +80,13 @@
               </li>
 
               <li class="dropdown singleDrop">
-                <a href="booking.html">Book Now</a>
+                <a href="booking.php">Book Now</a>
               </li>
 
               <li class="dropdown singleDrop">
                 <a href="contact.php">Contact Us</a>
               </li>
-              <li class="dropdown searchBox">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li>
-                    <span class="input-group">
-                      <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon2">
-                      <span class="input-group-addon" id="basic-addon2">Search</span>
-                    </span>
-                  </li>
-                </ul>
-              </li>
+             
             </ul>
           </div>
         </div>
@@ -355,7 +345,7 @@
                                 <br>
                                 <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <?php echo $row['price']; ?>* </span> Per Person</li>
                               </ul>
-                              <a href="booking.html" class="btn buttonCustomPrimary">BOOK NOW</a>
+                              <a href="booking.php" class="btn buttonCustomPrimary">BOOK NOW</a>
                             </div>
                           </aside>
                         </div>
@@ -366,12 +356,6 @@
                       <div class="row">
                         <div class="col-sm-8 col-xs-12">
                           <div class="commonInfo">
-
-
-                            <p>
-                              <button class="btn buttonTransparent" name="btnPDF" id="btnPDF" style="text-transform:capitalize;" onclick="downloadPDF()"><i class="fa fa-download" style="color:inherit;size:30px"></i> Download itinerary as PDF</button>
-                              <button class="btn buttonTransparent" name="btnPrint" id="btnPrint" style="text-transform:capitalize;" onclick="print()"><i class="fa fa-print" style="color:inherit;size:30px"></i> Print Itinerary</button>
-                            </p>
                             <p>
                               <strong>Day 1: </strong> Morning flight from Chennai to Malaysia. Arrive at KL airport. Proceed to Putrajaya sight seeing by cruise. Then check in hotel . Evening after fresh up visit Mutharamman temple and then go for shopping in Petaling street. Come back to hotel for dinner.<br><br>
                               <strong>Day 2: </strong> Morning after breakfast proceed to full day city tour. Visit Petronas Tower, KL Tower, Merdeka Square, National Monument, National Mosque, King Palace, Sultan Abdul Samad Building, Thean Hou Temple and Dataran Gallery Pedarana. Night dinner at hotel.<br><br>
@@ -398,7 +382,7 @@
                                 <br>
                                 <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"><?php echo $row['price']; ?>* </span> Per Person</li>
                               </ul>
-                              <a href="booking.html" class="btn buttonCustomPrimary">BOOK NOW</a>
+                              <a href="booking.php" class="btn buttonCustomPrimary">BOOK NOW</a>
                             </div>
                           </aside>
                         </div>
@@ -459,7 +443,7 @@
                                 <br>
                                 <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <?php echo $row['price']; ?>* </span> Per Person</li>
                               </ul>
-                              <a href="booking.html" class="btn buttonCustomPrimary">BOOK NOW</a>
+                              <a href="booking.php" class="btn buttonCustomPrimary">BOOK NOW</a>
                             </div>
                           </aside>
                         </div>
@@ -500,7 +484,7 @@
                                 <br>
                                 <li></i>Starts from <span class="booknw-rupees"><img src="img/home/rupees.png" width="12" height="17"> <?php echo $row['price']; ?>* </span> Per Person</li>
                               </ul>
-                              <a href="booking.html" class="btn buttonCustomPrimary">BOOK NOW</a>
+                              <a href="booking.php" class="btn buttonCustomPrimary">BOOK NOW</a>
                             </div>
                           </aside>
                         </div>

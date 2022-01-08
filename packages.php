@@ -78,23 +78,13 @@
               </li>
 
               <li class="dropdown singleDrop">
-                <a href="booking.html">Book Now</a>
+                <a href="booking.php">Book Now</a>
               </li>
 
               <li class="dropdown singleDrop">
                 <a href="contact.php">Contact Us</a>
               </li>
-              <li class="dropdown searchBox">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span></a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li>
-                    <span class="input-group">
-                      <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon2">
-                      <span class="input-group-addon" id="basic-addon2">Search</span>
-                    </span>
-                  </li>
-                </ul>
-              </li>
+             
             </ul>
           </div>
         </div>
@@ -184,7 +174,7 @@
                   <div class="bookingDetails">
 
                     <a href="cuddalore.php" class="btn buttonTransparent clearfix">Details</a>
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
@@ -250,7 +240,7 @@
 
                     <a href="kasi.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
@@ -295,7 +285,7 @@
                   <div class="bookingDetails">
 
                     <a href="singapore-malaysia.php" class="btn buttonTransparent clearfix">Details</a>
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
@@ -362,7 +352,7 @@
 
                     <a href="garudaseva.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
@@ -437,7 +427,7 @@
 
                     <a href="ahobilam.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
@@ -510,7 +500,7 @@
 
                     <a href="shirdi.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
@@ -581,7 +571,7 @@
 
                     <a href="udupi.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
@@ -628,7 +618,7 @@
                   <div class="bookingDetails">
 
                     <a href="bhadrachalam.php" class="btn buttonTransparent clearfix">Details</a>
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
@@ -691,7 +681,7 @@
 
                     <a href="mathura.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
@@ -761,7 +751,7 @@
 
                     <a href="mukthinath.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
@@ -808,7 +798,7 @@
                   <div class="bookingDetails">
 
                     <a href="divyadesam-2.php" class="btn buttonTransparent clearfix">Details</a>
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
                   </div>
                 </div>
@@ -872,7 +862,7 @@
 
                     <a href="pandyanadu.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
@@ -940,7 +930,7 @@
 
                     <a href="malainadu.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
@@ -1014,7 +1004,7 @@
 
                     <a href="pandaripuram.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
@@ -1086,7 +1076,7 @@
 
                     <a href="thulakaveri.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
@@ -1161,7 +1151,7 @@
 
                     <a href="navatirupati.php" class="btn buttonTransparent clearfix">Details</a>
 
-                    <a href="booking.html" class="btn buttonTransparent clearfix">Book</a>
+                    <a href="booking.php" class="btn buttonTransparent clearfix">Book</a>
 
                     <a href="contact.php" class="btn buttonTransparent">Inquiry</a>
 
